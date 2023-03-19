@@ -16,7 +16,7 @@ function TweetBox() {
         type="text"
         />
 
-<Button className="tweetBox__tweetButton">Tweet</Button>
+<Button className="tweetBox__tweetButton" type='submit'>Tweet</Button>
       </form>
     </div>
   );
