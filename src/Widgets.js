@@ -1,13 +1,10 @@
-import React from 'react';
-import './Widgets.css';
-import{
-  TwitterTimeEmbed,
-  TwitterShareButton,
-  TwitterTweetEmbed,
-  TwitterTimelineEmbed,
-}from  "react-twitter-embed"
 import SearchIcon from '@mui/icons-material/Search';
-import Twitter from '@mui/icons-material/Twitter';
+import React from 'react';
+import {
+  TwitterShareButton, TwitterTimelineEmbed, TwitterTweetEmbed
+} from "react-twitter-embed";
+import './Widgets.css';
+
 
 function Widgets() {
   return (
@@ -38,4 +35,4 @@ function Widgets() {
   )
 }
 
-export default Widgets
+export default {Widgets};
