@@ -1,14 +1,15 @@
-import React from "react";
+import React from "react";  
 import "./App.css";
 import Feed from "./Feed";
 import Sidebar from "./Sidebar";
 import Widgets from "./Widgets";
+import Button from '@mui/material/Button';
 
 
 function App() {
   return (
-    <div className="app">
-        <Sidebar />
+    <div className="app flex h-[100vh] max-w-[1300px] mx-auto py-0 px-[10px]">
+        <Sidebar /> 
         <Feed />
         <Widgets />
     </div>
