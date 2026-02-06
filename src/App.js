@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 
 function App() {
   return (
-    <div className="app flex h-[100vh] max-w-[1300px] mx-auto py-0 px-[10px]">
+    <div className="app flex h-[100vh] max-w-[1300px] mx-auto px-[10px] py-0">
         <Sidebar /> 
         <Feed />
         <Widgets />
