@@ -25,3 +25,16 @@
     font-size: 20px;
     font-weight: 800;
 }
+/* feed
+flex 04 border-r-[1px] border-twitter-background min-w-fit overflow-y-scroll
+feed::-webkit-scrollbar hidden
+
+feed -ms-overflow-style none scrollbar-width none
+
+feed__header
+sticky top-0 bg-white z-100 border-[1px] border-twitter-background p-[15px 20px]
+
+feed__header > h2
+text-[20px] font-bold-800
+
+*/
