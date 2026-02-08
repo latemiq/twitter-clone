@@ -1,6 +1,9 @@
 .widgets {
     flex: 0.3;
   }
+  /* 
+  flex-[0.3]
+  */
   
   .widgets__input {
     display: flex;
@@ -11,15 +14,24 @@
     margin-top: 10px;
     margin-left: 20px;
   }
+  /* 
+  flex item-center bg-twitter-background p-[10px] rounded-[20px] mt-[10px] ml-[20px]
+  */
   
   .widgets__input > input {
     border: none;
     background-color: var(--twiter-background);
   }
+  /* 
+  border-none bg-twitter-background
+  */
   
   .widgets__searchIcon {
     color: gray;
   }
+  /* 
+  color-gray
+  */
   
   .widgets__widgetContainer {
     margin-top: 15px;
@@ -28,8 +40,14 @@
     background-color: #f5f8fa;
     border-radius: 20px;
   }
+  /* 
+  mt-[15px] ml-[20px] p-[20px] bg-[#f5f8fa] rounder-[20px]
+  */
   
   .widgets__widgetContainer > h2 {
     font-size: 18px;
     font-weight: 800;
   }
+  /* 
+  font-[18px] font-[800]
+  */

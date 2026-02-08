@@ -53,14 +53,20 @@ text-[15px] mb-5px]
   color: var(--twiter-color);
 }
 /*
- 
+ text-[14px] text-twitter-color
  */
 .post__headerSpecial {
   font-weight: 600;
   font-size: 12px;
   color: gray;
 }
+/* 
+font-[600] text-[12px] color-gray
+*/
 
 .post__avatar {
   padding: 20px;
 }
+/* 
+p-[20px]
+*/
