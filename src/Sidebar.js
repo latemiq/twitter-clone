@@ -14,9 +14,9 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 function Sidebar() {
   return (
-    <div className='sidebar'>
+    <div className='sidebar border-r-[1px] border-twitter-background flex-[0.3] min-w-[250px] mt-[20px] pl-[20px] pr-[20px]'>
       {/* Twitter icon */}
-      <TwitterIcon className='sidebar__twitterIcon'/>
+      <TwitterIcon className='sidebar__twitterIcon color-twitter-color text-[30px] ml-[20px] mb-[20px]'/>
       <SidebarOption text="Home" Icon={HomeIcon} />
       <SidebarOption text="Explore" Icon={TagIcon} />
       <SidebarOption text="Notifications" Icon={NotificationsNoneIcon} />
@@ -26,7 +26,7 @@ function Sidebar() {
       <SidebarOption text="Profile" Icon={PermIdentityIcon} />
       <SidebarOption text="More" Icon={MoreHorizIcon} />
       {/* SidebarOption */}
-      <Button variant="outlined" className="sidebar__tweet" fullWidth>Tweet</Button>
+      <Button variant="outlined" className="sidebar__tweet !bg-[var(--twiter-color)]!border-none!text-white!font-[900]![text-transform:inherit]!rounded-[30px]h-[50px]!mt-[20px]" fullWidth>Tweet</Button>
       {/* Button -> Tweet */}
     </div>
   )

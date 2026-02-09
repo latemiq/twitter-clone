@@ -19,9 +19,9 @@ function Feed() {
   }, []);
 
   return (
-    <div className='feed'>
-      <div className='feed__header'>
-        <h2>Home</h2>
+    <div className='feed flex 04 border-r-[1px] border-twitter-background min-w-fit overflow-y-scroll'>
+      <div className='feed__header sticky top-0 bg-white z-100 border-[1px] border-twitter-background p-[15px 20px]'>
+        <h2 className='text-[20px] font-bold-800'>Home</h2>
       </div>
       <TweetBox />
       {posts.map((post) => (
