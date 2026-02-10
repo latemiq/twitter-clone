@@ -9,7 +9,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 function Widgets() {
   return (
-    <div className="widgets">
+    <div className="widgets hidden md:block font-bold text-xl ml-4 mr-4">
       <div className="widgets__input">
         <SearchIcon className="widgets__searchIcon" />
         <input placeholder="Search Twitter" type="text" />
