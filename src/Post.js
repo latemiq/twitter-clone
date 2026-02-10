@@ -11,7 +11,7 @@ function Post({displayName, username,verified,text,image,avatar}) {
   return (
     <div className='post flex items-start border-b-[1px] border-twitter-background pb-[10px]'>
       <div className='post__avatar p-[20px]'>
-        <Avatar src={avatar} />
+        <Avatar src="https://i.pinimg.com/736x/7a/97/5d/7a975dd685017a84f9bc0b520a65ae20.jpg" />
       </div>
       <div className='post__body flex-1 p-[10px]'>
         <div className='post__header'>
