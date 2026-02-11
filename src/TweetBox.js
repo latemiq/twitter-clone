@@ -2,6 +2,7 @@ import { Avatar, Button } from '@mui/material';
 import React, { useState } from 'react';
 import './TweetBox.css';
 import db, { serverTimestamp } from './firebase';
+import TweetBtn from './TweetBtn';
 
 function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState('');
@@ -43,7 +44,11 @@ function TweetBox() {
           value={tweetImage}
           onChange={(e) => setTweetImage(e.target.value)}
         />
-        <Button className="tweetBox__tweetButton" type='submit'>Tweet</Button>
+        {/* <Button className="tweetBox__tweetButton" type='submit'>Tweet</Button> */}
+        <div className="tweetBox__actions">
+          <TweetBtn onClick={sendTweet} />
+        </div>
+        
       </form>
     </div>
   );

@@ -33,19 +33,25 @@ flex flex-col
     flex-1 ml-[20px] text-[20px] border-none
   */
   
-  .tweetBox__imageInput {
-    border: none;
-    padding: 10px;
-  }
-  /* 
-  border-none p-[10px]
-  */
-  
-  .tweetBox__tweetButton {
-    background-color: var(--twiter-color) !important;
-    border: none !important;
-    color: white !important;
-    font-weight: 900 !important;
+.tweetBox__imageInput {
+  border: none;
+  padding: 10px;
+}
+/* 
+border-none p-[10px]
+*/
+
+.tweetBox__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.tweetBox__tweetButton {
+  background-color: var(--twiter-color) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 900 !important;
     text-transform: inherit !important;
     border-radius: 30px !important;
     width: 80px;
