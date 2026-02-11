@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import gsap from 'gsap';
 
-// Dodałem prop 'onClick', żebyś mógł przekazać funkcję wysyłania tweeta
+
 function TweetBtn({ onClick }) { 
   const buttonRef = useRef(null);
   const textRef = useRef(null);
@@ -12,10 +12,9 @@ function TweetBtn({ onClick }) {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = (e) => {
-    // Jeśli rodzic przekazał funkcję onClick (np. wysyłanie do bazy), uruchom ją
+
     if (onClick) onClick(e);
 
-    // Jeśli animacja już trwa, nie rób nic więcej
     if (isAnimating) return; 
     setIsAnimating(true);
 
@@ -23,7 +22,6 @@ function TweetBtn({ onClick }) {
 
     const tl = gsap.timeline();
 
-    // --- ANIMACJA ---
     tl.to(textRef.current, {
       scale: 0, opacity: 0, duration: 0.3, ease: "back.in(1.7)"
     })
@@ -46,10 +44,8 @@ function TweetBtn({ onClick }) {
     <Button 
       ref={buttonRef}
       
-      // 1. TUTAJ DODAŁEM TYPE SUBMIT
       type="submit" 
       
-      // 2. Obsługa kliknięcia (Animacja + Logika formularza)
       onClick={handleClick}
       
       variant="contained" 

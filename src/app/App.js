@@ -1,7 +1,7 @@
-import "./App.css";
-import Feed from "./Feed";
-import Sidebar from "./Sidebar";
-import Widgets from "./Widgets";
+﻿import "./App.css";
+import Feed from "../features/tweets/components/Feed";
+import Sidebar from "../features/navigation/components/Sidebar";
+import Widgets from "../features/explore/components/Widgets";
 
 
 function App() {
@@ -15,3 +15,4 @@ function App() {
 }
 
 export default App;
+
