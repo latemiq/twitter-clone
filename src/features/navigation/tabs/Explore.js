@@ -1,7 +1,9 @@
 ﻿import React from 'react';
 
 function Explore() {
-  return <div>Explore</div>;
+  return 
+  
+
 }
 
 export default Explore;
