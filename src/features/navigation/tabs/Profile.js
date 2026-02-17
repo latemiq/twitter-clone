@@ -2,27 +2,26 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SearchIcon from "@mui/icons-material/Search";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import CameraAltIcon from '@mui/icons-material/CameraAlt'; // Nowa ikona aparatu
-import CloseIcon from '@mui/icons-material/Close'; // Ikona anulowania
+import CameraAltIcon from '@mui/icons-material/CameraAlt'; 
+import CloseIcon from '@mui/icons-material/Close'; 
 
 const tabs = ["Posts", "Replies", "Highlights", "Articles", "Media", "Likes"];
 
 function Profile() {
-  // 1. STAN DANYCH
-  const [isEditing, setIsEditing] = useState(false); // Czy jesteśmy w trybie edycji?
-  const [banner, setBanner] = useState(null); // Tło (null = domyślny kolor)
-  const [avatar, setAvatar] = useState(null); // Awatar (null = litera J)
+  
+  const [isEditing, setIsEditing] = useState(false); 
+  const [banner, setBanner] = useState(null); 
+  const [avatar, setAvatar] = useState(null); 
 
-  // 2. REFERENCJE DO UKRYTYCH INPUTÓW
+  
   const bannerInputRef = useRef(null);
   const avatarInputRef = useRef(null);
 
-  // 3. OBSŁUGA WYBORU PLIKÓW
+  
   const handleFileChange = (e, type) => {
     const file = e.target.files[0];
     if (file) {
-      // Tworzymy tymczasowy URL do podglądu zdjęcia
+  
       const imageUrl = URL.createObjectURL(file);
       
       if (type === 'banner') setBanner(imageUrl);
@@ -33,7 +32,7 @@ function Profile() {
   return (
     <div className="flex-[0.4] min-w-[620px] max-w-[700px] h-screen overflow-y-auto bg-white text-[#0f1419] border-x border-[#eff3f4]">
       
-      {/* --- UKRYTE INPUTY (To one technicznie pobierają plik) --- */}
+      
       <input 
         type="file" 
         ref={bannerInputRef} 
@@ -49,7 +48,7 @@ function Profile() {
         accept="image/*"
       />
 
-      {/* HEADER */}
+      
       <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-b border-[#eff3f4]">
         <div className="flex items-center justify-between px-4 py-2">
           <div className="flex items-center gap-4 flex-1">
@@ -62,29 +61,29 @@ function Profile() {
             </div>
           </div>
           <span className="w-9 h-9 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer transition">
-             {/* Jeśli edytujemy, pokaż X, jeśli nie - lupę (opcjonalne) */}
+      
              {isEditing ? <CloseIcon onClick={() => setIsEditing(false)}/> : <SearchIcon />}
           </span>
         </div>
       </div>
 
-      {/* --- BANNER (TŁO) --- */}
+      
       <div className="relative h-[200px] bg-[#cfd9de] border-b border-[#eff3f4]">
-        {/* Wyświetlanie zdjęcia, jeśli jest wybrane */}
+      
         {banner && (
           <img src={banner} alt="Banner" className="w-full h-full object-cover" />
         )}
 
-        {/* Nakładka z aparatem (widoczna tylko w trybie edycji) */}
+      
         {isEditing && (
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center gap-4">
             <div 
-              onClick={() => bannerInputRef.current.click()} // Kliknięcie w ikonę klika w ukryty input
+              onClick={() => bannerInputRef.current.click()}
               className="w-10 h-10 bg-black/50 rounded-full text-white grid place-items-center cursor-pointer hover:bg-black/70 transition"
             >
               <CameraAltIcon />
             </div>
-            {/* Opcjonalnie: ikona X do usunięcia tła */}
+            
             {banner && (
                <div onClick={() => setBanner(null)} className="w-10 h-10 bg-black/50 rounded-full text-white grid place-items-center cursor-pointer hover:bg-black/70 transition">
                  <CloseIcon />
@@ -96,11 +95,10 @@ function Profile() {
 
       <section className="relative px-6 pb-5">
         
-        {/* --- AWATAR --- */}
+        
         <div className="absolute -top-16 left-4">
           <div className="relative w-[130px] h-[130px]">
             
-            {/* Sam obrazek lub litera */}
             <div className={`w-full h-full rounded-full border-4 border-white overflow-hidden bg-pink-500 grid place-items-center ${!avatar && 'text-white text-5xl font-semibold'}`}>
               {avatar ? (
                 <img src={avatar} alt="Avatar" className="w-full h-full object-cover" />
@@ -109,7 +107,6 @@ function Profile() {
               )}
             </div>
 
-            {/* Ikona aparatu (tylko w edycji) */}
             {isEditing && (
               <div 
                 onClick={() => avatarInputRef.current.click()}
@@ -121,7 +118,6 @@ function Profile() {
           </div>
         </div>
 
-        {/* PRZYCISK EDYCJI */}
         <div className="flex justify-end pt-4 h-[60px]">
           <button 
             onClick={() => setIsEditing(!isEditing)}
@@ -135,7 +131,6 @@ function Profile() {
           </button>
         </div>
 
-        {/* DANE PROFILOWE */}
         <h2 className="text-xl font-bold mt-4">John Kowal</h2>
         <p className="text-[#536471]">@johnyykowal</p>
 
@@ -150,7 +145,7 @@ function Profile() {
         </div>
       </section>
 
-      {/* TABS (Bez zmian) */}
+
       <nav className="grid grid-cols-6 border-y border-[#eff3f4]">
         {tabs.map((tab, index) => {
           const isActive = index === 0;
