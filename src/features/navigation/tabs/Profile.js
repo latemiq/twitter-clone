@@ -4,10 +4,12 @@ import SearchIcon from "@mui/icons-material/Search";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import CameraAltIcon from '@mui/icons-material/CameraAlt'; 
 import CloseIcon from '@mui/icons-material/Close'; 
+import { useNavigate } from "react-router-dom";
 
 const tabs = ["Posts", "Replies", "Highlights", "Articles", "Media", "Likes"];
 
 function Profile() {
+  const navigate = useNavigate();
   
   const [isEditing, setIsEditing] = useState(false); 
   const [banner, setBanner] = useState(null); 
@@ -52,7 +54,10 @@ function Profile() {
       <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-b border-[#eff3f4]">
         <div className="flex items-center justify-between px-4 py-2">
           <div className="flex items-center gap-4 flex-1">
-            <span className="w-9 h-9 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer transition">
+            <span
+              className="w-9 h-9 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer transition"
+              onClick={() => navigate("/home")}
+            >
               <ArrowBackIcon />
             </span>
             <div className="flex flex-col">
