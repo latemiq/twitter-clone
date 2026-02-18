@@ -1,2 +1,34 @@
-[00:03:40.516] Server  LOG       Reload env: .env.local
-[00:03:51.729] Server  LOG       Reload env: .env.local
+[00:00:02.527] Server  LOG     ✓ Ready in 1822ms
+[00:00:05.894] Server  LOG     ○ Compiling /[[...slug]] ...
+[00:00:12.784] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:13.202] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:00:13.202] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:00:13.203] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:00:15.812] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
+	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
+	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
+[00:00:15.813] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
+	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
+	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
+[00:01:37.401] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:37.713] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:37.713] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:01:37.714] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:01:42.976] Browser WARN    Clerk: The prop "redirectUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:01:48.603] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:48.975] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:01:48.975] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:01:49.131] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:52.239] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:58.841] Browser ERROR   Failure to load window.twttr, aborting load
