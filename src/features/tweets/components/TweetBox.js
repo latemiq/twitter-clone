@@ -1,6 +1,5 @@
 ﻿import { Avatar, Button } from '@mui/material';
 import React, { useState } from 'react';
-import './TweetBox.css';
 import db, { serverTimestamp } from '../api/firebase';
 import TweetBtn from './TweetBtn';
 
@@ -10,6 +9,10 @@ function TweetBox() {
 
   const sendTweet = (e) => {
     e.preventDefault();
+
+    if (!db) {
+      return;
+    }
 
     db.collection('posts').add({
       displayName: 'User',

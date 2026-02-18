@@ -1,4 +1,3 @@
-import "./App.css";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Feed from "../features/tweets/components/Feed";
 import Sidebar from "../features/navigation/components/Sidebar";

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './Sidebar.css';
 import SidebarOption from './SidebarOption';
 import Button from '@mui/material/Button';
 import TagIcon from '@mui/icons-material/Tag';

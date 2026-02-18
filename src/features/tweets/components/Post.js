@@ -5,7 +5,6 @@ import RepeatIcon from '@mui/icons-material/Repeat';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { Avatar } from "@mui/material";
 import React from 'react';
-import './Post.css';
 
 function Post({ displayName, username, verified, text, image, avatar }) {
   return (

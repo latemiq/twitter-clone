@@ -1,5 +1,4 @@
 ﻿import React, { useEffect, useState } from 'react';
-import './Feed.css';
 import db from '../api/firebase';
 import Post from './Post';
 import TweetBox from './TweetBox';
@@ -8,6 +7,10 @@ function Feed() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
+    if (!db) {
+      return undefined;
+    }
+
     const unsubscribe = db
       .collection('posts')
       .orderBy('createdAt', 'desc')
