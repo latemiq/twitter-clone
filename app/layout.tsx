@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
+import AuthHeader from "../src/features/auth/components/AuthHeader";
 import "../src/index.css";
 import "../src/app/App.css";
 import "../src/features/explore/components/Widgets.css";
@@ -46,18 +40,14 @@ export default function RootLayout({
   }
 
   return (
-    <ClerkProvider publishableKey={publishableKey}>
+    <ClerkProvider
+      publishableKey={publishableKey}
+      signInUrl="/sign-in"
+      signUpUrl="/sign-up"
+    >
       <html lang="en">
         <body>
-          <header className="flex items-center justify-end gap-3 px-4 py-3 border-b border-gray-200 bg-white">
-            <SignedOut>
-              <SignInButton />
-              <SignUpButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </header>
+          <AuthHeader />
           {children}
         </body>
       </html>

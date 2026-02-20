@@ -1,17 +1,16 @@
-import { SignIn } from '@clerk/nextjs'
-import Image from 'next/image';
+import { SignIn } from "@clerk/nextjs";
+import AuthShell from "../../_components/AuthShell";
+import { twitterClerkAppearance } from "../../_clerkAppearance";
 
 export default function Page() {
-
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2'>
-      <div>
-        <Image src='/login.jpg' alt="login" width={500} height={500}
-          className='w-full object-center'/>
-      </div>
-      <div className='flex justify-center items-center h-screen'>
-        <SignIn />
-      </div>
-    </div>
-  )
+    <AuthShell title="Sign in to Twitter" subtitle="Welcome back. Continue where you left off.">
+      <SignIn
+        appearance={twitterClerkAppearance}
+        routing="path"
+        path="/sign-in"
+        signUpUrl="/sign-up"
+      />
+    </AuthShell>
+  );
 }
