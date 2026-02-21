@@ -1,5 +1,7 @@
 .widgets {
-    flex: 0.3;
+    flex: 0 0 320px;
+    width: 320px;
+    min-width: 320px;
   }
   /* 
   flex-[0.3]

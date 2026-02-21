@@ -1,1005 +1,221 @@
-[00:00:02.279] Server  LOG     ✓ Ready in 1523ms
-[00:05:19.547] Server  LOG     ✓ Compiled in 1466ms
-[00:05:22.455] Server  LOG     ✓ Compiled in 25ms
-[00:05:31.598] Server  ERROR   ⨯ Error: URL is malformed "/sign-in". Please use only absolute URLs - https://nextjs.org/docs/messages/middleware-relative-urls
-[00:06:08.404] Server  ERROR   ⨯ Error: URL is malformed "/sign-in". Please use only absolute URLs - https://nextjs.org/docs/messages/middleware-relative-urls
-[00:07:16.667] Server  LOG     ✓ Compiled in 5ms
-[00:11:13.370] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:11:13.833] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:11:35.546] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:11:35.845] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:11:54.243] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:11:54.649] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:11:54.649] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:11:54.846] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:11:56.921] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:11:56.921] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:12:47.880] Server  LOG     ✓ Compiled in 126ms
-[00:12:57.224] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:12:57.374] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:13:10.878] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:11.289] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:13:11.289] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:13:11.496] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:13:13.440] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:13:13.440] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:14:50.980] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
+[00:00:08.502] Server  LOG     ✓ Ready in 3.9s
+[00:00:47.207] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:49.147] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:00:49.147] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:00:49.364] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:00:53.883] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.883] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.883] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
+[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:27.497] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:28.289] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:30.203] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:01:30.203] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:01:31.242] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:01:31.242] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:01:31.242] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:31.255] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:50.243] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.243] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
+[00:01:52.402] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:57.014] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:01:57.014] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:01:58.787] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:02:11.237] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.237] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.237] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
+[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
+[00:04:29.921] Server  LOG     ✓ Compiled in 2.4s
+[00:04:41.633] Server  LOG     ✓ Compiled in 178ms
+[00:06:00.093] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:00.502] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:06:00.502] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:06:00.502] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.607] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.607] Browser ERROR   Failure to load window.twttr, aborting load
+[00:06:21.607] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:22.532] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:22.690] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:07:22.892] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:07:22.892] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
+[00:09:51.452] Server  LOG     ✓ Compiled in 26ms
+[00:10:12.019] Server  LOG     ✓ Compiled in 144ms
+[00:10:21.383] Server  LOG     ✓ Compiled in 22ms
+[00:10:34.210] Server  LOG     ✓ Compiled in 139ms
+[00:10:45.693] Server  LOG     ✓ Compiled in 143ms
+[00:10:56.132] Server  LOG     ✓ Compiled in 32ms
+[00:11:05.639] Server  LOG     ✓ Compiled in 159ms
+[00:13:45.068] Server  LOG     ✓ Compiled in 258ms
+[00:13:52.829] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:53.091] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:13:53.410] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:13:53.410] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:14:33.093] Server  LOG     ✓ Compiled in 23ms
+[00:14:37.107] Server  LOG     ✓ Compiled in 18ms
+[00:14:53.860] Server  LOG     ✓ Compiled in 127ms
+[00:14:53.971] Browser ERROR   ./src/features/explore/components/Widgets.js:18:6
+Parsing ecmascript source code failed
+  16 |
+  17 |   return (
+> 18 |      const suggestedAccounts = [
+     |      ^^^^^
+  19 |
+  20 |       <div className="widgets__input">
+  21 |         <SearchIcon className="widgets__searchIcon" />
 
-
+Expression expected
 
 Import traces:
   Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
+    ./src/features/explore/components/Widgets.js [Client Component Browser]
     ./src/app/App.js [Client Component Browser]
     ./src/app/LegacyClientApp.tsx [Client Component Browser]
     ./src/app/LegacyClientApp.tsx [Server Component]
     ./app/[[...slug]]/page.tsx [Server Component]
 
   Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
+    ./src/features/explore/components/Widgets.js [Client Component SSR]
     ./src/app/App.js [Client Component SSR]
     ./src/app/LegacyClientApp.tsx [Client Component SSR]
     ./src/app/LegacyClientApp.tsx [Server Component]
     ./app/[[...slug]]/page.tsx [Server Component]
+[00:14:54.240] Browser ERROR   ./src/features/explore/components/Widgets.js:18:6
+Parsing ecmascript source code failed
+  16 |
+  17 |   return (
+> 18 |      const suggestedAccounts = [
+     |      ^^^^^
+  19 |
+  20 |       <div className="widgets__input">
+  21 |         <SearchIcon className="widgets__searchIcon" />
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:50.984] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
+Expression expected
 
 Import traces:
   Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
+    ./src/features/explore/components/Widgets.js [Client Component Browser]
     ./src/app/App.js [Client Component Browser]
     ./src/app/LegacyClientApp.tsx [Client Component Browser]
     ./src/app/LegacyClientApp.tsx [Server Component]
     ./app/[[...slug]]/page.tsx [Server Component]
 
   Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
+    ./src/features/explore/components/Widgets.js [Client Component SSR]
     ./src/app/App.js [Client Component SSR]
     ./src/app/LegacyClientApp.tsx [Client Component SSR]
     ./src/app/LegacyClientApp.tsx [Server Component]
     ./app/[[...slug]]/page.tsx [Server Component]
+[00:14:54.263] Browser ERROR   ./src/features/explore/components/Widgets.js:18:6
+Parsing ecmascript source code failed
+  16 |
+  17 |   return (
+> 18 |      const suggestedAccounts = [
+     |      ^^^^^
+  19 |
+  20 |       <div className="widgets__input">
+  21 |         <SearchIcon className="widgets__searchIcon" />
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:50.989] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
+Expression expected
 
 Import traces:
   Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
+    ./src/features/explore/components/Widgets.js [Client Component Browser]
     ./src/app/App.js [Client Component Browser]
     ./src/app/LegacyClientApp.tsx [Client Component Browser]
     ./src/app/LegacyClientApp.tsx [Server Component]
     ./app/[[...slug]]/page.tsx [Server Component]
 
   Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
+    ./src/features/explore/components/Widgets.js [Client Component SSR]
     ./src/app/App.js [Client Component SSR]
     ./src/app/LegacyClientApp.tsx [Client Component SSR]
     ./src/app/LegacyClientApp.tsx [Server Component]
     ./app/[[...slug]]/page.tsx [Server Component]
+[00:14:54.268] Browser ERROR   ./src/features/explore/components/Widgets.js:18:6
+Parsing ecmascript source code failed
+  16 |
+  17 |   return (
+> 18 |      const suggestedAccounts = [
+     |      ^^^^^
+  19 |
+  20 |       <div className="widgets__input">
+  21 |         <SearchIcon className="widgets__searchIcon" />
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:50.992] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
+Expression expected
 
 Import traces:
   Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
+    ./src/features/explore/components/Widgets.js [Client Component Browser]
     ./src/app/App.js [Client Component Browser]
     ./src/app/LegacyClientApp.tsx [Client Component Browser]
     ./src/app/LegacyClientApp.tsx [Server Component]
     ./app/[[...slug]]/page.tsx [Server Component]
 
   Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
+    ./src/features/explore/components/Widgets.js [Client Component SSR]
     ./src/app/App.js [Client Component SSR]
     ./src/app/LegacyClientApp.tsx [Client Component SSR]
     ./src/app/LegacyClientApp.tsx [Server Component]
     ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:50.997] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.000] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.003] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.006] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.010] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.013] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.017] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.018] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.022] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.026] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.029] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.032] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.036] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.038] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.041] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.042] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.049] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.051] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.055] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.067] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.079] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.082] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.084] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.088] Server  ERROR   ⨯ ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:14:51.090] Server  LOG     ✓ Compiled in 192ms
-[00:14:51.196] Browser ERROR   ./src/features/tweets/components/Feed.js:3:26
-Module not found: Can't resolve './TweetBox'
-  1 | ﻿import React, { useEffect, useState } from 'react';
-  2 | import db from '../api/firebase';
-> 3 | import Post from './Post';
-    |                          ^
-> 4 | import TweetBox from './TweetBox';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 |
-  6 | function Feed() {
-  7 |   const [posts, setPosts] = useState([]);
-
-Import traces:
-  Client Component Browser:
-    ./src/features/tweets/components/Feed.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/tweets/components/Feed.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:15:02.077] Server  LOG     ✓ Compiled in 214ms
-[00:15:03.677] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:15:03.677] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:16:48.420] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:48.773] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:16:48.773] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:16:48.773] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:16:49.662] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:16:49.662] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:16:56.388] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:56.600] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:16:56.909] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:16:56.909] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:16:57.607] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:16:57.607] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:17:10.600] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:10.987] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:17:10.987] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:17:11.188] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:17:13.171] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:17:13.171] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:17:18.253] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:18.398] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:17:18.622] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:17:18.622] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:17:19.350] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
-[00:17:19.350] Browser INFO    %c[Update] There have been recent updates to Embedded X Timelines and supported parameters.%c
-	•For more information on what has changed visit: https://twittercommunity.com/t/embedded-timelines-update-parameters-support/177112
-	•Please submit feedback or report any bugs: https://twittercommunity.com/c/publisher/websites/ font-weight:bold;color:#006FD6 color:#006FD6
+[00:14:56.116] Server  LOG     ✓ Compiled in 184ms
+[00:15:08.602] Server  LOG     ✓ Compiled in 121ms
+[00:15:12.426] Server  LOG     ✓ Compiled in 123ms

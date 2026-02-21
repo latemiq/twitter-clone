@@ -8,11 +8,11 @@ import React from 'react';
 
 function Post({ displayName, username, verified, text, image, avatar }) {
   return (
-    <div className='post flex items-start border-b-[1px] border-twitter-background pb-[10px]'>
+    <div className='post flex w-full items-start border-b-[1px] border-twitter-background pb-[10px]'>
       <div className='post__avatar p-[20px]'>
-        <Avatar src="https://i.pinimg.com/736x/7a/97/5d/7a975dd685017a84f9bc0b520a65ae20.jpg" />
+        <Avatar src={avatar || "https://i.pinimg.com/736x/7a/97/5d/7a975dd685017a84f9bc0b520a65ae20.jpg"} />
       </div>
-      <div className='post__body flex-1 p-[10px]'>
+      <div className='post__body flex-1 min-w-0 p-[10px]'>
         <div className='post__header'>
           <div className='post__headerText'>
             <h3 className='text-[15px] mb-[5px]'>
@@ -25,7 +25,14 @@ function Post({ displayName, username, verified, text, image, avatar }) {
             <p>{text}</p>
           </div>
         </div>
-        <img src={image} alt='' />
+        {image && (
+          <img
+            src={image}
+            alt='Post attachment'
+            className='block w-full max-w-full h-auto max-h-[520px] rounded-[20px] object-cover'
+            loading='lazy'
+          />
+        )}
         <div className='post__footer flex justify-between mt-[20px]'>
           <div className="group flex items-center text-gray-500 cursor-pointer">
             <div className="p-2 group-hover:bg-blue-100 group-hover:text-blue-500 rounded-full transition-all">

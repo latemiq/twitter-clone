@@ -12,7 +12,7 @@ import More from "../features/navigation/tabs/More";
 
 function App() {
   return (
-    <div className="app flex h-[100vh] max-w-[1300px] mx-auto px-[10px] py-0">
+    <div className="app flex h-[100vh] w-full max-w-[1300px] mx-auto px-[10px] py-0 overflow-x-hidden">
       <Sidebar />
 
       <Routes>

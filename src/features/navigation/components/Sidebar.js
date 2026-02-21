@@ -13,7 +13,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 function Sidebar() {
   return (
-    <div className='sidebar border-r-[1px] border-twitter-background flex-[0.3] min-w-[250px] mt-[20px] pl-[20px] pr-[20px]'>
+    <div className='sidebar border-r-[1px] border-twitter-background mt-[20px]'>
       <TwitterIcon className='sidebar__twitterIcon color-twitter-color text-[30px] ml-[20px] mb-[20px]'/>
 
       <SidebarOption to="/home" text="Home" Icon={HomeIcon} />

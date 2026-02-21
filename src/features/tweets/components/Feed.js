@@ -22,9 +22,9 @@ function Feed() {
   }, []);
 
   return (
-    <div className='feed border-r-[1px] border-twitter-background min-w-fit overflow-y-scroll'>
+    <div className='feed flex-1 min-w-0 border-r-[1px] border-twitter-background overflow-x-hidden overflow-y-scroll'>
       <div className='feed__header sticky top-0 bg-white z-100 border-[1px] border-twitter-background p-[15px 20px]'>
-        <div className='feed__headerTitle flex items-center justify-center gap-[30%]'>
+        <div className='feed__headerTitle mx-auto flex max-w-[520px] items-center justify-between gap-[16px]'>
           <div className='flex items-center gap-[10px]'>
             <h2 className='text-[20px] font-[calibri] font-extrabold'>For you</h2>
           </div>

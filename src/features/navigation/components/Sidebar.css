@@ -1,10 +1,10 @@
 .sidebar{
     border-right: 1px solid var(--twiter-background);
-    flex: 0.3;
-    min-width: 250px;
+    flex: 0 0 88px;
+    min-width: 88px;
     margin-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 /* 
 border-r-[1px] border-twitter-background flex-[0.3] min-w-[250px] mt-[20px] pl-[20px] pr-[20px]
@@ -32,3 +32,12 @@ border-r-[1px] border-twitter-background flex-[0.3] min-w-[250px] mt-[20px] pl-[
 /* 
 bg-twitter-color border-none text-white font-[900] text-inherit rounded-[30px] h-[50px] mt-[20px]
 */
+
+@media (min-width: 1280px) {
+    .sidebar{
+        flex: 0 0 250px;
+        min-width: 250px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
