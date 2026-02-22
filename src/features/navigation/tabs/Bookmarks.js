@@ -7,7 +7,7 @@ function Bookmarks() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col flex-1 h-screen overflow-hidden border-x border-gray-800">
+    <div className="flex flex-col flex-1 h-screen overflow-hidden border-[#eff3f4]">
 
       <div className='flex items-center gap-6 px-4 py-3'>
         <div className="cursor-pointer">

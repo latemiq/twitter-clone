@@ -1,221 +1,59 @@
-[00:00:08.502] Server  LOG     ✓ Ready in 3.9s
-[00:00:47.207] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:49.147] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:00:49.147] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:00:49.364] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:00:53.883] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.883] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.883] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
-[00:00:53.884] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:27.497] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:28.289] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:30.203] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:01:30.203] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:01:31.242] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:01:31.242] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:01:31.242] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:01:31.255] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:01:50.243] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.243] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:50.244] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:51.245] Browser ERROR   Failure to load window.twttr, aborting load
-[00:01:52.402] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:57.014] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:01:57.014] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:01:58.787] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:02:11.237] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.237] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.237] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
-[00:02:11.238] Browser ERROR   Failure to load window.twttr, aborting load
-[00:04:29.921] Server  LOG     ✓ Compiled in 2.4s
-[00:04:41.633] Server  LOG     ✓ Compiled in 178ms
-[00:06:00.093] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:00.502] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:06:00.502] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:06:00.502] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.606] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.607] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.607] Browser ERROR   Failure to load window.twttr, aborting load
-[00:06:21.607] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:22.532] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:22.690] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:07:22.892] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:07:22.892] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:07:44.019] Browser ERROR   Failure to load window.twttr, aborting load
-[00:09:51.452] Server  LOG     ✓ Compiled in 26ms
-[00:10:12.019] Server  LOG     ✓ Compiled in 144ms
-[00:10:21.383] Server  LOG     ✓ Compiled in 22ms
-[00:10:34.210] Server  LOG     ✓ Compiled in 139ms
-[00:10:45.693] Server  LOG     ✓ Compiled in 143ms
-[00:10:56.132] Server  LOG     ✓ Compiled in 32ms
-[00:11:05.639] Server  LOG     ✓ Compiled in 159ms
-[00:13:45.068] Server  LOG     ✓ Compiled in 258ms
-[00:13:52.829] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:53.091] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:13:53.410] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:13:53.410] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:14:33.093] Server  LOG     ✓ Compiled in 23ms
-[00:14:37.107] Server  LOG     ✓ Compiled in 18ms
-[00:14:53.860] Server  LOG     ✓ Compiled in 127ms
-[00:14:53.971] Browser ERROR   ./src/features/explore/components/Widgets.js:18:6
-Parsing ecmascript source code failed
-  16 |
-  17 |   return (
-> 18 |      const suggestedAccounts = [
-     |      ^^^^^
-  19 |
-  20 |       <div className="widgets__input">
-  21 |         <SearchIcon className="widgets__searchIcon" />
-
-Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./src/features/explore/components/Widgets.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/explore/components/Widgets.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-[00:14:54.240] Browser ERROR   ./src/features/explore/components/Widgets.js:18:6
-Parsing ecmascript source code failed
-  16 |
-  17 |   return (
-> 18 |      const suggestedAccounts = [
-     |      ^^^^^
-  19 |
-  20 |       <div className="widgets__input">
-  21 |         <SearchIcon className="widgets__searchIcon" />
-
-Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./src/features/explore/components/Widgets.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/explore/components/Widgets.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-[00:14:54.263] Browser ERROR   ./src/features/explore/components/Widgets.js:18:6
-Parsing ecmascript source code failed
-  16 |
-  17 |   return (
-> 18 |      const suggestedAccounts = [
-     |      ^^^^^
-  19 |
-  20 |       <div className="widgets__input">
-  21 |         <SearchIcon className="widgets__searchIcon" />
-
-Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./src/features/explore/components/Widgets.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/explore/components/Widgets.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-[00:14:54.268] Browser ERROR   ./src/features/explore/components/Widgets.js:18:6
-Parsing ecmascript source code failed
-  16 |
-  17 |   return (
-> 18 |      const suggestedAccounts = [
-     |      ^^^^^
-  19 |
-  20 |       <div className="widgets__input">
-  21 |         <SearchIcon className="widgets__searchIcon" />
-
-Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./src/features/explore/components/Widgets.js [Client Component Browser]
-    ./src/app/App.js [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Client Component Browser]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/features/explore/components/Widgets.js [Client Component SSR]
-    ./src/app/App.js [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Client Component SSR]
-    ./src/app/LegacyClientApp.tsx [Server Component]
-    ./app/[[...slug]]/page.tsx [Server Component]
-[00:14:56.116] Server  LOG     ✓ Compiled in 184ms
-[00:15:08.602] Server  LOG     ✓ Compiled in 121ms
-[00:15:12.426] Server  LOG     ✓ Compiled in 123ms
+[00:00:05.049] Server  LOG     ✓ Ready in 3.9s
+[00:00:16.682] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.405] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:00:18.405] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:00:18.606] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:00:42.038] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:42.267] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:10.852] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:12.552] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:12.553] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:01:12.553] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:14:40.031] Server  LOG     ✓ Compiled in 2.1s
+[00:14:49.041] Server  LOG     ✓ Compiled in 125ms
+[00:15:22.720] Server  LOG     ✓ Compiled in 115ms
+[00:15:39.200] Server  LOG     ✓ Compiled in 167ms
+[00:24:14.307] Server  LOG     ✓ Compiled in 266ms
+[00:24:18.724] Server  LOG     ✓ Compiled in 103ms
+[00:24:22.868] Server  LOG     ✓ Compiled in 119ms
+[00:24:25.019] Server  LOG     ✓ Compiled in 121ms
+[00:24:35.782] Server  LOG     ✓ Compiled in 95ms
+[00:24:37.035] Server  LOG     ✓ Compiled in 109ms
+[00:24:48.712] Server  LOG     ✓ Compiled in 99ms
+[00:24:48.853] Browser ERROR   uncaughtError: ReferenceError: SearchIcon is not defined
+[00:24:58.479] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:24:58.515] Server  LOG     ✓ Compiled in 102ms
+[00:24:59.979] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:00.309] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:25:00.309] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:25:00.458] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:25:05.876] Server  LOG     ✓ Compiled in 87ms
+[00:25:17.226] Server  LOG     ✓ Compiled in 88ms
+[00:25:21.158] Server  LOG     ✓ Compiled in 85ms
+[00:32:58.660] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:59.137] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:32:59.137] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:32:59.137] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:35:10.627] Server  LOG     ✓ Compiled in 550ms
+[00:35:12.224] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:12.378] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:35:12.627] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:35:12.627] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:35:30.649] Server  LOG     ✓ Compiled in 124ms
+[00:35:33.959] Server  LOG     ✓ Compiled in 141ms
+[00:35:42.319] Server  LOG     ✓ Compiled in 147ms
+[00:35:53.244] Server  LOG     ✓ Compiled in 119ms
+[00:35:54.786] Server  LOG     ✓ Compiled in 140ms
+[00:36:00.791] Server  LOG     ✓ Compiled in 142ms
+[00:36:03.032] Server  LOG     ✓ Compiled in 123ms
+[00:36:09.883] Server  LOG     ✓ Compiled in 164ms
+[00:36:14.095] Server  LOG     ✓ Compiled in 130ms
+[00:36:16.685] Server  LOG     ✓ Compiled in 140ms
+[00:36:18.509] Server  LOG     ✓ Compiled in 110ms
+[00:36:19.902] Server  LOG     ✓ Compiled in 102ms
+[00:36:21.757] Server  LOG     ✓ Compiled in 111ms
+[00:36:23.939] Server  LOG     ✓ Compiled in 106ms
+[00:36:25.718] Server  LOG     ✓ Compiled in 113ms
+[00:37:31.559] Server  LOG     ✓ Compiled in 104ms
+[00:37:40.398] Server  LOG     ✓ Compiled in 98ms
+[00:37:43.905] Server  LOG     ✓ Compiled in 144ms
