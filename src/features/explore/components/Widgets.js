@@ -49,7 +49,7 @@ function Widgets() {
                 <p className="font-semibold text-gray-900">{account.name}</p>
                 <p className="text-xs text-gray-500">{account.handle}</p>
               </div>
-              <span className="rounded-full bg-black px-3 py-1 text-xs text-white">Follow</span>
+              <span className="rounded-full !bg-[var(--twiter-color)] px-3 py-1 text-xs text-white">Follow</span>
             </a>
           ))}
         </div>
