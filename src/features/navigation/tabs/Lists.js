@@ -6,7 +6,7 @@ function Lists() {
 
     <div className="sticky top-0 bg-white/80 backdrop-blur-md z-10 cursor-pointer">
       <div className="flex justify-between items-center px-4 py-3">
-        <h2 className="text-xl font-bold">Notifications</h2>
+        <h2 className="text-xl font-bold">Lists</h2>
         <div className="p-2 hover:bg-gray-200 rounded-full transition">
           <SettingsOutlinedIcon />
         </div>
