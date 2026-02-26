@@ -200,3 +200,147 @@ Import traces:
 [10:51:46.814] Server  LOG     ✓ Compiled in 104ms
 [10:51:51.614] Server  LOG     ✓ Compiled in 93ms
 [10:55:02.507] Server  LOG     ✓ Compiled in 134ms
+[25:18:47.517] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[25:18:47.936] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[25:18:47.936] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[25:18:48.151] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[26:26:35.890] Server  LOG     ✓ Compiled in 376ms
+[26:26:39.408] Server  LOG     ✓ Compiled in 122ms
+[27:36:27.000] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[27:36:27.372] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[27:36:27.372] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[27:36:27.568] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[32:43:38.122] Browser WARN    [2026-02-26T20:06:11.547Z]  @firebase/firestore: Firestore (9.18.0): WebChannelConnection RPC 'Listen' stream 0x894a66e8 transport errored: {"defaultPrevented":false,"g":{"A":true,"I":null,"P":"[Circular]","g":{"$":false,"$a":2,"A":1,"B":null,"Ba":15,"C":0,"Ca":12,"D":"gsessionid","Da":false,"F":{"g":"firestore.googleapis.com","h":false,"i":{"g":{},"h":3,"i":null,"j":false},"j":"https","l":"/google.firestore.v1.Firestore/Listen/channel","m":null,"o":"","s":""},"Fa":{"g":{}},"G":0,"H":true,"I":"B2jPTpJcPSeaDhYiTk7Vlw","J":45000,"K":false,"L":true,"N":true,"O":false,"P":0,"S":{"Content-Type":"text/plain","X-Goog-Api-Client":"gl-js/ fire/9.18.0"},"T":35,"U":60124,"V":"https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel","Xa":5000,"Y":true,"Ya":false,"Z":2,"Za":false,"ab":5,"bb":10000,"g":null,"h":{"g":null,"h":null,"i":[],"j":1,"l":10},"i":[],"ia":{"database":"projects/twitter-clone-5fecf/databases/(default)"},"j":{"g":true},"ka":"","l":{"g":"[Circular]"},"la":null,"m":null,"ma":8,"o":null,"pa":400,"ra":{"h":{},"j":false,"l":null},"s":null,"sa":{"g":"firestore.googleapis.com","h":false,"i":{"g":{},"h":3,"i":null,"j":false},"j":"https","l":"/google.firestore.v1.Firestore/Listen/channel","m":null,"o":"","s":""},"ta":600000,"u":null,"v":null,"za":"xeTCkSTU8lANL3aRYJztxLROMmSnraO0zueZZ1YgyYsf0qgGgrZXPQ"},"h":{"database":"projects/twitter-clone-5fecf/databases/(default)"},"i":{"g":{"a":["[Object]"],"b":["[Object]"],"c":["[Object]"],"d":["[Object]"]},"h":4,"src":"[Circular]"},"j":{"g":"[Circular]"},"l":"https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel","s":false,"v":true},"status":1,"target":{"A":true,"I":null,"P":"[Circular]","g":{"$":false,"$a":2,"A":1,"B":null,"Ba":15,"C":0,"Ca":12,"D":"gsessionid","Da":false,"F":{"g":"firestore.googleapis.com","h":false,"i":{"g":{},"h":3,"i":null,"j":false},"j":"https","l":"/google.firestore.v1.Firestore/Listen/channel","m":null,"o":"","s":""},"Fa":{"g":{}},"G":0,"H":true,"I":"B2jPTpJcPSeaDhYiTk7Vlw","J":45000,"K":false,"L":true,"N":true,"O":false,"P":0,"S":{"Content-Type":"text/plain","X-Goog-Api-Client":"gl-js/ fire/9.18.0"},"T":35,"U":60124,"V":"https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel","Xa":5000,"Y":true,"Ya":false,"Z":2,"Za":false,"ab":5,"bb":10000,"g":null,"h":{"g":null,"h":null,"i":[],"j":1,"l":10},"i":[],"ia":{"database":"projects/twitter-clone-5fecf/databases/(default)"},"j":{"g":true},"ka":"","l":{"g":"[Circular]"},"la":null,"m":null,"ma":8,"o":null,"pa":400,"ra":{"h":{},"j":false,"l":null},"s":null,"sa":{"g":"firestore.googleapis.com","h":false,"i":{"g":{},"h":3,"i":null,"j":false},"j":"https","l":"/google.firestore.v1.Firestore/Listen/channel","m":null,"o":"","s":""},"ta":600000,"u":null,"v":null,"za":"xeTCkSTU8lANL3aRYJztxLROMmSnraO0zueZZ1YgyYsf0qgGgrZXPQ"},"h":{"database":"projects/twitter-clone-5fecf/databases/(default)"},"i":{"g":{"a":["[Object]"],"b":["[Object]"],"c":["[Object]"],"d":["[Object]"]},"h":4,"src":"[Circular]"},"j":{"g":"[Circular]"},"l":"https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel","s":false,"v":true},"type":"c"}
+[32:46:29.950] Server  LOG     ✓ Compiled in 581ms
+[32:49:44.360] Server  LOG     ✓ Compiled in 126ms
+[32:50:19.874] Server  LOG     ✓ Compiled in 478ms
+[32:50:55.981] Server  LOG     ✓ Compiled in 129ms
+[32:50:56.208] Browser ERROR   uncaughtError: ReferenceError: BookmarkBorderIcon is not defined
+[32:51:01.350] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[32:51:01.358] Server  LOG     ✓ Compiled in 119ms
+[32:51:01.494] Browser ERROR   uncaughtError: ReferenceError: BookmarkBorderIcon is not defined
+[32:51:03.187] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[32:51:03.799] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[32:51:03.799] Browser ERROR   uncaughtError: ReferenceError: BookmarkBorderIcon is not defined
+[32:51:20.767] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[32:51:20.785] Server  LOG     ✓ Compiled in 145ms
+[32:51:21.955] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[32:51:22.114] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[32:51:22.170] Server  LOG     ✓ Compiled in 430ms
+[32:51:22.345] Browser ERROR   uncaughtError: ReferenceError: PermIdentityIcon is not defined
+[32:51:28.473] Server  LOG     ✓ Compiled in 114ms
+[32:51:28.577] Browser ERROR   ./src/features/navigation/components/Sidebar.js:21:1
+Parsing ecmascript source code failed
+  19 | import
+  20 |
+> 21 | const moreItems = [
+     | ^^^^^
+  22 |   { to: '/lists', text: 'Lists', Icon: ListAltIcon },
+  23 |   { to: '/communities', text: 'Communities', Icon: Groups2OutlinedIcon },
+  24 |   { to: '/business', text: 'Business', Icon: BusinessCenterOutlinedIcon },
+
+Expected 'from', got 'const'
+
+Import traces:
+  Client Component Browser:
+    ./src/features/navigation/components/Sidebar.js [Client Component Browser]
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/features/navigation/components/Sidebar.js [Client Component SSR]
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+[32:51:29.106] Browser ERROR   ./src/features/navigation/components/Sidebar.js:21:1
+Parsing ecmascript source code failed
+  19 | import
+  20 |
+> 21 | const moreItems = [
+     | ^^^^^
+  22 |   { to: '/lists', text: 'Lists', Icon: ListAltIcon },
+  23 |   { to: '/communities', text: 'Communities', Icon: Groups2OutlinedIcon },
+  24 |   { to: '/business', text: 'Business', Icon: BusinessCenterOutlinedIcon },
+
+Expected 'from', got 'const'
+
+Import traces:
+  Client Component Browser:
+    ./src/features/navigation/components/Sidebar.js [Client Component Browser]
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/features/navigation/components/Sidebar.js [Client Component SSR]
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+[32:51:32.300] Browser ERROR   ./src/features/navigation/components/Sidebar.js:21:1
+Parsing ecmascript source code failed
+  19 | import 
+  20 |
+> 21 | const moreItems = [
+     | ^^^^^
+  22 |   { to: '/lists', text: 'Lists', Icon: ListAltIcon },
+  23 |   { to: '/communities', text: 'Communities', Icon: Groups2OutlinedIcon },
+  24 |   { to: '/business', text: 'Business', Icon: BusinessCenterOutlinedIcon },
+
+Expected 'from', got 'const'
+
+Import traces:
+  Client Component Browser:
+    ./src/features/navigation/components/Sidebar.js [Client Component Browser]
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/features/navigation/components/Sidebar.js [Client Component SSR]
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+[32:51:33.107] Browser ERROR   ./src/features/navigation/components/Sidebar.js:21:1
+Parsing ecmascript source code failed
+  19 | import 
+  20 |
+> 21 | const moreItems = [
+     | ^^^^^
+  22 |   { to: '/lists', text: 'Lists', Icon: ListAltIcon },
+  23 |   { to: '/communities', text: 'Communities', Icon: Groups2OutlinedIcon },
+  24 |   { to: '/business', text: 'Business', Icon: BusinessCenterOutlinedIcon },
+
+Expected 'from', got 'const'
+
+Import traces:
+  Client Component Browser:
+    ./src/features/navigation/components/Sidebar.js [Client Component Browser]
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/features/navigation/components/Sidebar.js [Client Component SSR]
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+[32:51:37.682] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[32:51:37.683] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[32:51:37.702] Server  LOG     ✓ Compiled in 139ms
+[32:51:38.706] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[32:51:38.850] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[32:51:39.161] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[32:51:39.161] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[32:52:02.806] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[32:52:02.928] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[32:52:03.139] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[32:52:03.139] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.

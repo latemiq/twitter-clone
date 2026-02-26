@@ -8,7 +8,11 @@ import Messages from "../features/navigation/tabs/Messages";
 import Bookmarks from "../features/navigation/tabs/Bookmarks";
 import Lists from "../features/navigation/tabs/Lists";
 import Profile from "../features/navigation/tabs/Profile";
-import More from "../features/navigation/tabs/More";
+import Communities from "../features/navigation/tabs/Communities";
+import Business from "../features/navigation/tabs/Business";
+import Ads from "../features/navigation/tabs/Ads";
+import CreateSpace from "../features/navigation/tabs/CreateSpace";
+import SettingsPrivacy from "../features/navigation/tabs/SettingsPrivacy";
 
 function App() {
   return (
@@ -24,7 +28,12 @@ function App() {
         <Route path="/bookmarks" element={<Bookmarks />} />
         <Route path="/lists" element={<Lists />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/more" element={<More />} />
+        <Route path="/communities" element={<Communities />} />
+        <Route path="/business" element={<Business />} />
+        <Route path="/ads" element={<Ads />} />
+        <Route path="/create-space" element={<CreateSpace />} />
+        <Route path="/settings-privacy" element={<SettingsPrivacy />} />
+        <Route path="/more" element={<Navigate to="/lists" replace />} />
       </Routes>
 
       <Widgets />
