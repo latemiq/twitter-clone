@@ -14,7 +14,11 @@ const trendingTopics = [
   "Święty"
 ];
 
+const exploreTabs = ["For You", "Trending", "News", "Sports", "Entertainment"];
+
 function Explore() {
+  const [activeTab, setActiveTab] = React.useState(exploreTabs[0]);
+
   return (
     <div className="flex-[0.5] min-w-[600px] max-w-[600px] border-r border-[#eff3f4] bg-white h-screen overflow-y-auto text-[#0f1419]">
       
@@ -33,10 +37,16 @@ function Explore() {
           </div>
         </div>
         <div className="flex overflow-x-auto hide-scrollbar mt-1">
-          {["For You", "Trending", "News", "Sports", "Entertainment"].map((tab, index) => {
-            const isActive = index === 0;
+          {exploreTabs.map((tab) => {
+            const isActive = activeTab === tab;
             return (
-              <div key={tab} className="flex-1 min-w-max text-center hover:bg-gray-100 cursor-pointer transition relative">
+              <button
+                key={tab}
+                type="button"
+                aria-pressed={isActive}
+                onClick={() => setActiveTab(tab)}
+                className="flex-1 min-w-max text-center hover:bg-gray-100 cursor-pointer transition relative bg-transparent border-none p-0"
+              >
                 <div className="py-4 px-4 inline-block relative">
                   <span className={`text-[15px] ${isActive ? "font-bold text-[#0f1419]" : "font-medium text-[#536471]"}`}>
                     {tab}
@@ -45,7 +55,7 @@ function Explore() {
                     <div className="absolute bottom-0 left-0 right-0 h-[4px] bg-[#1d9bf0] rounded-full" />
                   )}
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>
