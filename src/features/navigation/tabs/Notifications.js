@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 const notificationTabs = ["All", "Mentions"];
