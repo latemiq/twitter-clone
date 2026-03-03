@@ -1,5 +1,820 @@
-[00:00:02.397] Server  LOG     ✓ Ready in 1643ms
-[00:00:06.006] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:06.138] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:00:06.423] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:00:06.423] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:00:03.865] Server  LOG     ✓ Ready in 2.8s
+[00:00:30.963] Server  LOG     ○ Compiling /[[...slug]] ...
+[00:00:36.013] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:36.453] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:00:36.453] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:00:36.755] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:02:55.938] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.944] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.947] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.950] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.956] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.960] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.962] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.967] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.971] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.975] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.978] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.982] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.990] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.994] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:55.998] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.002] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.007] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.011] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.015] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.020] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.026] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.030] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.034] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.039] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.045] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.049] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.052] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.058] Server  ERROR   ⨯ ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:56.062] Server  LOG     ✓ Compiled in 375ms
+[00:02:56.185] Browser ERROR   ./src/app/App.js:6:1
+Module not found: Can't resolve '../features/navigation/tabs/Notifications'
+  4 | import Widgets from "../features/explore/components/Widgets";
+  5 | import Explore from "../features/navigation/tabs/Explore";
+> 6 | import Notifications from "../features/navigation/tabs/Notifications";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import Messages from "../features/navigation/tabs/Messages";
+  8 | import Bookmarks from "../features/navigation/tabs/Bookmarks";
+  9 | import Lists from "../features/navigation/tabs/Lists";
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:16.473] Server  LOG     ✓ Compiled in 217ms
+[00:03:22.025] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:22.336] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:03:22.336] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:03:22.336] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.

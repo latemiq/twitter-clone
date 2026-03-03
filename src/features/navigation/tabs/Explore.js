@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import SearchIcon from "@mui/icons-material/Search";
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
@@ -365,6 +365,7 @@ function Explore() {
             </button>
           </div>
         ))}
+
 
         <div className="px-4 py-4 hover:bg-gray-100 cursor-pointer transition rounded-b-xl">
           <span className="text-[#1d9bf0] text-[15px]">Show more</span>
