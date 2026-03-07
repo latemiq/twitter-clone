@@ -1,12 +1,15 @@
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import PublishIcon from '@mui/icons-material/Publish';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { Avatar } from "@mui/material";
-import React from 'react';
+import React, { useState } from 'react';
 
 function Post({ displayName, username, verified, text, image, avatar }) {
+  const [isLiked, setIsLiked] = useState(false);
+
   return (
     <div className='post flex w-full items-start border-b-[1px] border-twitter-background pb-[10px]'>
       <div className='post__avatar p-[20px]'>
@@ -48,14 +51,18 @@ function Post({ displayName, username, verified, text, image, avatar }) {
             <span className="text-xs group-hover:text-green-500">5</span>
           </div>
 
-          <div className="group flex items-center text-gray-500 cursor-pointer">
-            <div className="p-2 group-hover:bg-red-100 group-hover:text-red-500 rounded-full transition-all">
-              <FavoriteBorderIcon
-                fontSize="small"
-                className="group-hover:[&_path]:fill-current"
-              />
+          <div
+            className={`group flex items-center cursor-pointer ${isLiked ? "text-red-500" : "text-gray-500"}`}
+            onClick={() => setIsLiked((prev) => !prev)}
+          >
+            <div className={`p-2 rounded-full transition-all ${isLiked ? "bg-red-100 text-red-500" : "group-hover:bg-red-100 group-hover:text-red-500"}`}>
+              {isLiked ? (
+                <FavoriteIcon fontSize="small" />
+              ) : (
+                <FavoriteBorderIcon fontSize="small" />
+              )}
             </div>
-            <span className="text-xs group-hover:text-red-500">24</span>
+            <span className={`text-xs ${isLiked ? "text-red-500" : "group-hover:text-red-500"}`}>24</span>
           </div>
 
 
