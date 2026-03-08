@@ -1,5 +1,7 @@
 
 <img width="3764" height="1914" alt="image" src="https://github.com/user-attachments/assets/6b18154e-3620-4fb5-a040-06c8e4c56cde" />
+<img width="3743" height="1915" alt="image" src="https://github.com/user-attachments/assets/c7690884-186e-4a25-9f5c-f473fb9e8fba" />
+
 # Twitter Clone
 
 
