@@ -30,6 +30,7 @@ function Home() {
       {posts.map((post) => (
         <Post
           key={post.id}
+          postId={post.id}
           displayName={post.displayName}
           username={post.username}
           verified={post.verified}
