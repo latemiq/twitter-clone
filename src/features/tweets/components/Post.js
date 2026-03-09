@@ -11,10 +11,13 @@ import db, { serverTimestamp } from '../api/firebase';
 
 function Post({ postId, displayName, username, verified, text, image, avatar }) {
   const [isLiked, setIsLiked] = useState(false);
+  const [isReposted, setIsReposted] = useState(false);
+  const [repostCount, setRepostCount] = useState(0);
   const [isCommenting, setIsCommenting] = useState(false);
   const [commentText, setCommentText] = useState('');
   const [comments, setComments] = useState([]);
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
+  const [isSubmittingRepost, setIsSubmittingRepost] = useState(false);
   const { user } = useUser();
 
   const commenterDisplayName =
@@ -45,6 +48,25 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
     return () => unsubscribe();
   }, [postId]);
 
+  useEffect(() => {
+    if (!db || !postId) {
+      setRepostCount(0);
+      setIsReposted(false);
+      return undefined;
+    }
+
+    const unsubscribe = db
+      .collection('posts')
+      .doc(postId)
+      .collection('reposts')
+      .onSnapshot((snapshot) => {
+        setRepostCount(snapshot.docs.length);
+        setIsReposted(Boolean(user?.id && snapshot.docs.some((doc) => doc.id === user.id)));
+      });
+
+    return () => unsubscribe();
+  }, [postId, user?.id]);
+
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
 
@@ -68,6 +90,36 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
       setCommentText('');
     } finally {
       setIsSubmittingComment(false);
+    }
+  };
+
+  const handleRepostToggle = async () => {
+    if (!db || !postId || !user?.id || isSubmittingRepost) {
+      return;
+    }
+
+    setIsSubmittingRepost(true);
+
+    const repostRef = db
+      .collection('posts')
+      .doc(postId)
+      .collection('reposts')
+      .doc(user.id);
+
+    try {
+      if (isReposted) {
+        await repostRef.delete();
+      } else {
+        await repostRef.set({
+          userId: user.id,
+          displayName: commenterDisplayName,
+          username: commenterUsername,
+          avatar: commenterAvatar,
+          createdAt: serverTimestamp(),
+        });
+      }
+    } finally {
+      setIsSubmittingRepost(false);
     }
   };
 
@@ -97,6 +149,12 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
             loading='lazy'
           />
         )}
+        {isReposted && (
+          <div className="mt-3 flex items-center gap-2 text-sm font-medium text-green-600">
+            <RepeatIcon fontSize="small" />
+            <span>Podajesz dalej jako @{commenterUsername}</span>
+          </div>
+        )}
         <div className='post__footer flex justify-between mt-[20px]'>
           <button
             type="button"
@@ -109,12 +167,25 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
             <span className="text-xs group-hover:text-blue-500">{comments.length}</span>
           </button>
 
-          <div className="group flex items-center text-gray-500 cursor-pointer">
-            <div className="p-2 group-hover:bg-green-100 group-hover:fill-green-500 rounded-full transition-all">
+          <button
+            type="button"
+            onClick={handleRepostToggle}
+            disabled={!db || !user?.id || isSubmittingRepost}
+            className={`group flex items-center border-none bg-transparent p-0 ${
+              isReposted ? 'text-green-500' : 'text-gray-500'
+            } ${!db || !user?.id || isSubmittingRepost ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
+          >
+            <div
+              className={`rounded-full p-2 transition-all ${
+                isReposted ? 'bg-green-100 text-green-500' : 'group-hover:bg-green-100 group-hover:text-green-500'
+              }`}
+            >
               <RepeatIcon fontSize="small" />
             </div>
-            <span className="text-xs group-hover:text-green-500">5</span>
-          </div>
+            <span className={`text-xs ${isReposted ? 'text-green-500' : 'group-hover:text-green-500'}`}>
+              {repostCount}
+            </span>
+          </button>
 
           <div
             className={`group flex items-center cursor-pointer ${isLiked ? "text-red-500" : "text-gray-500"}`}
