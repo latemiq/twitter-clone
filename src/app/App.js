@@ -12,7 +12,7 @@ import Communities from "../features/navigation/tabs/Communities";
 import Business from "../features/navigation/tabs/Business";
 import Ads from "../features/navigation/tabs/Ads";
 import CreateSpace from "../features/navigation/tabs/CreateSpace";
-import SettingsPrivacy from "../features/navigation/tabs/SettingsPrivacy";
+import Settings from "../features/navigation/tabs/Settings";
 
 function App() {
   return (
@@ -32,7 +32,8 @@ function App() {
         <Route path="/business" element={<Business />} />
         <Route path="/ads" element={<Ads />} />
         <Route path="/create-space" element={<CreateSpace />} />
-        <Route path="/settings-privacy" element={<SettingsPrivacy />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/settings-privacy" element={<Navigate to="/settings" replace />} />
         <Route path="/more" element={<Navigate to="/lists" replace />} />
       </Routes>
 

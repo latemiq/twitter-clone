@@ -1,10 +1,11 @@
 ﻿import React from 'react';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import MailOutlineIcon from '@mui/material/SvgIcon'; 
 import SearchIcon from '@mui/icons-material/Search';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { useNavigate } from 'react-router-dom';
 
 function Messages() {
+  const navigate = useNavigate();
   return (
 
     <div className="flex flex-1 h-screen bg-white overflow-hidden border-x border-[#eff3f4]">
@@ -15,9 +16,14 @@ function Messages() {
         <div className="p-4 flex items-center justify-between sticky top-0 bg-white/80 backdrop-blur-md z-10">
           <h1 className="text-xl font-bold text-[#0f1419]">Messages</h1>
           <div className="flex gap-2">
-            <div className="p-2 hover:bg-gray-200 rounded-full cursor-pointer transition">
+            <button
+              type="button"
+              onClick={() => navigate('/settings')}
+              aria-label="Open settings"
+              className="p-2 hover:bg-gray-200 rounded-full cursor-pointer transition bg-transparent border-none"
+            >
               <SettingsOutlinedIcon className="!text-[20px]" />
-            </div>
+            </button>
             <div className="p-2 hover:bg-gray-200 rounded-full cursor-pointer transition">
                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5V12h-2V5.5c0-.276-.224-.5-.5-.5H4.498c-.276 0-.5.224-.5.5V18.5c0 .276.224.5.5.5h6.502v2h-6.502c-1.381 0-2.5-1.119-2.5-2.5V5.5zm18 12V15h2v2.5c0 .276.224.5.5.5H25v2h-2.5c-.276 0-.5.224-.5.5V23h-2v-2.5c0-.276-.224-.5-.5-.5H17v-2h2.5c.276 0 .5-.224.5-.5zM3.998 8.265l8 3.637 8-3.637V5.5c0-.276-.224-.5-.5-.5H4.498c-.276 0-.5.224-.5.5v2.765zm16 1.47l-8 3.637-8-3.637v1.47l8 3.637 8-3.637v-1.47z"></path></svg>
             </div>

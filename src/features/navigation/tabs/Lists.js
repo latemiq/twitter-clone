@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import { useNavigate } from 'react-router-dom';
 
 const listTabs = ["Other", "Subscribed", "Member"];
 
@@ -21,6 +22,7 @@ const listContentByTab = {
 
 
 function Lists() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = React.useState(listTabs[0]);
   const currentContent = listContentByTab[activeTab];
 
@@ -29,9 +31,14 @@ function Lists() {
     <div className="sticky top-0 bg-white/80 backdrop-blur-md z-10 cursor-pointer">
       <div className="flex justify-between items-center px-4 py-3">
         <h2 className="text-xl font-bold">Lists</h2>
-        <div className="p-2 hover:bg-gray-200 rounded-full transition">
+        <button
+          type="button"
+          onClick={() => navigate('/settings')}
+          aria-label="Open settings"
+          className="p-2 hover:bg-gray-200 rounded-full transition bg-transparent border-none"
+        >
           <SettingsOutlinedIcon />
-        </div>
+        </button>
       </div>
 
       <div className="flex border-b border-[#eff3f4]">

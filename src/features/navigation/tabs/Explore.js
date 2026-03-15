@@ -4,6 +4,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import PersonIcon from '@mui/icons-material/Person';
+import { useNavigate } from 'react-router-dom';
 
 const exploreTabs = ["For You", "Trending", "News", "Sports", "Entertainment"];
 
@@ -256,6 +257,7 @@ const exploreContentByTab = {
 };
 
 function Explore() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = React.useState(exploreTabs[0]);
   const currentContent = exploreContentByTab[activeTab];
 
@@ -272,9 +274,14 @@ function Explore() {
               className="bg-transparent outline-none text-[15px] w-full text-[#0f1419] placeholder:text-[#536471]"
             />
           </div>
-          <div className="p-2 hover:bg-gray-100 rounded-full cursor-pointer transition">
+          <button
+            type="button"
+            onClick={() => navigate('/settings')}
+            aria-label="Open settings"
+            className="p-2 hover:bg-gray-100 rounded-full cursor-pointer transition bg-transparent border-none"
+          >
             <SettingsOutlinedIcon className="text-[#0f1419]" />
-          </div>
+          </button>
         </div>
         <div className="flex overflow-x-auto hide-scrollbar mt-1">
           {exploreTabs.map((tab) => {

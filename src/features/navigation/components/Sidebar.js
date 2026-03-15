@@ -23,7 +23,6 @@ const moreItems = [
   { to: '/business', text: 'Business', Icon: BusinessCenterOutlinedIcon },
   { to: '/ads', text: 'Ads', Icon: CampaignOutlinedIcon },
   { to: '/create-space', text: 'Create your Space', Icon: KeyboardVoiceOutlinedIcon },
-  { to: '/settings-privacy', text: 'Setting and privacy', Icon: SettingsOutlinedIcon },
 ];
 
 function SidebarDropdownItem({ to, text, Icon }) {
@@ -79,6 +78,7 @@ function Sidebar() {
       <SidebarOption to="/messages" text="Messages" Icon={MailOutlineIcon} />
       <SidebarOption to="/bookmarks" text="Bookmarks" Icon={BookmarkBorderIcon} />
       <SidebarOption to="/lists" text="Lists" Icon={ListAltIcon} />
+      <SidebarOption to="/settings" text="Settings" Icon={SettingsOutlinedIcon} />
       <SidebarOption to="/profile" text="Profile" Icon={PermIdentityIcon} />
 
       <div className='relative w-fit' ref={moreMenuRef}>
