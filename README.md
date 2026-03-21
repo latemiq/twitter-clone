@@ -32,3 +32,7 @@ Glowne zalozenie projektu to polaczenie nowoczesnego shellu aplikacji w Next.js 
 - Tailwind CSS
 - Material UI
 - Styled Components / Emotion
+npm 
+login: user@gmail.com
+
+Password: Pass123!

@@ -11,12 +11,14 @@ import db, { serverTimestamp } from '../api/firebase';
 
 function Post({ postId, displayName, username, verified, text, image, avatar }) {
   const [isLiked, setIsLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState(0);
   const [isReposted, setIsReposted] = useState(false);
   const [repostCount, setRepostCount] = useState(0);
   const [isCommenting, setIsCommenting] = useState(false);
   const [commentText, setCommentText] = useState('');
   const [comments, setComments] = useState([]);
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
+  const [isSubmittingLike, setIsSubmittingLike] = useState(false);
   const [isSubmittingRepost, setIsSubmittingRepost] = useState(false);
   const { user } = useUser();
 
@@ -47,6 +49,25 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
 
     return () => unsubscribe();
   }, [postId]);
+
+  useEffect(() => {
+    if (!db || !postId) {
+      setLikeCount(0);
+      setIsLiked(false);
+      return undefined;
+    }
+
+    const unsubscribe = db
+      .collection('posts')
+      .doc(postId)
+      .collection('likes')
+      .onSnapshot((snapshot) => {
+        setLikeCount(snapshot.docs.length);
+        setIsLiked(Boolean(user?.id && snapshot.docs.some((doc) => doc.id === user.id)));
+      });
+
+    return () => unsubscribe();
+  }, [postId, user?.id]);
 
   useEffect(() => {
     if (!db || !postId) {
@@ -90,6 +111,36 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
       setCommentText('');
     } finally {
       setIsSubmittingComment(false);
+    }
+  };
+
+  const handleLikeToggle = async () => {
+    if (!db || !postId || !user?.id || isSubmittingLike) {
+      return;
+    }
+
+    setIsSubmittingLike(true);
+
+    const likeRef = db
+      .collection('posts')
+      .doc(postId)
+      .collection('likes')
+      .doc(user.id);
+
+    try {
+      if (isLiked) {
+        await likeRef.delete();
+      } else {
+        await likeRef.set({
+          userId: user.id,
+          displayName: commenterDisplayName,
+          username: commenterUsername,
+          avatar: commenterAvatar,
+          createdAt: serverTimestamp(),
+        });
+      }
+    } finally {
+      setIsSubmittingLike(false);
     }
   };
 
@@ -187,19 +238,29 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
             </span>
           </button>
 
-          <div
-            className={`group flex items-center cursor-pointer ${isLiked ? "text-red-500" : "text-gray-500"}`}
-            onClick={() => setIsLiked((prev) => !prev)}
+          <button
+            type="button"
+            onClick={handleLikeToggle}
+            disabled={!db || !user?.id || isSubmittingLike}
+            className={`group flex items-center border-none bg-transparent p-0 ${
+              isLiked ? 'text-red-500' : 'text-gray-500'
+            } ${!db || !user?.id || isSubmittingLike ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
           >
-            <div>
+            <div
+              className={`rounded-full p-2 transition-all ${
+                isLiked ? 'bg-red-100 text-red-500' : 'group-hover:bg-red-100 group-hover:text-red-500'
+              }`}
+            >
               {isLiked ? (
                 <FavoriteIcon fontSize="small" />
               ) : (
                 <FavoriteBorderIcon fontSize="small" />
               )}
             </div>
-            <span className={`text-xs ${isLiked ? "text-red-500" : "group-hover:text-red-500"}`}>24</span>
-          </div>
+            <span className={`text-xs ${isLiked ? 'text-red-500' : 'group-hover:text-red-500'}`}>
+              {likeCount}
+            </span>
+          </button>
 
 
           <div className="group flex items-center text-gray-500 cursor-pointer">
