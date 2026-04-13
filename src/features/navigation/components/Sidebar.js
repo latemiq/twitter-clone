@@ -78,6 +78,7 @@ function Sidebar() {
       <SidebarOption to="/messages" text="Messages" Icon={MailOutlineIcon} />
       <SidebarOption to="/bookmarks" text="Bookmarks" Icon={BookmarkBorderIcon} />
       <SidebarOption to="/lists" text="Lists" Icon={ListAltIcon} />
+      <SidebarOption to="/communities" text="Communities" Icon={Groups2OutlinedIcon} />
       <SidebarOption to="/settings" text="Settings" Icon={SettingsOutlinedIcon} />
       <SidebarOption to="/profile" text="Profile" Icon={PermIdentityIcon} />
 
