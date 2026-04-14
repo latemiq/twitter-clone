@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+/builnpm run dev
 
 .next
 # misc
