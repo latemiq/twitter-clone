@@ -1,23 +1,927 @@
-[00:00:08.560] Server  LOG     ✓ Ready in 6.1s
-[00:00:40.933] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:41.326] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:00:41.326] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:00:41.326] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:01:38.315] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:38.923] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:01:38.923] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:01:39.235] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:03:12.221] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:12.355] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:03:12.603] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:03:12.603] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:03:34.513] Server  LOG     ✓ Compiled in 2.5s
-[00:03:35.746] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:35.880] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:03:36.158] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:03:36.158] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:05:05.907] Server  LOG     ✓ Compiled in 307ms
-[00:05:09.049] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:09.177] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:05:09.488] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:05:09.488] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:00:04.970] Server  LOG     ✓ Ready in 3.9s
+[00:00:13.976] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:14.407] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:00:14.407] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:00:14.682] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:44.971] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:44.977] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:44.982] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:44.987] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:44.993] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:44.996] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:44.999] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.003] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.006] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.011] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.015] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.018] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.021] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.023] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.026] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.028] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.032] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.034] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.036] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.038] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.043] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.046] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.050] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.052] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.055] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.057] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.059] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.061] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.065] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.067] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.069] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.071] Server  ERROR   ⨯ ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:45.073] Server  LOG     ✓ Compiled in 2.5s
+[00:01:45.187] Browser ERROR   ./src/app/App.js:14:1
+Module not found: Can't resolve '../features/navigation/tabs/CreateSpace'
+  12 | import Business from "../features/navigation/tabs/Business";
+  13 | import Ads from "../features/navigation/tabs/Ads";
+> 14 | import CreateSpace from "../features/navigation/tabs/CreateSpace";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | import Settings from "../features/navigation/tabs/Settings";
+  16 |
+  17 | function App() {
+
+Import traces:
+  Client Component Browser:
+    ./src/app/App.js [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Client Component Browser]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/App.js [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Client Component SSR]
+    ./src/app/LegacyClientApp.tsx [Server Component]
+    ./app/[[...slug]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:46.982] Server  LOG     ✓ Compiled in 480ms
