@@ -6,6 +6,7 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import CloseIcon from "@mui/icons-material/Close";
 import { useUser } from "@clerk/nextjs";
 import { useNavigate } from "react-router-dom";
+import RepliesFeed from "../../tweets/components/RepliesFeed";
 
 const tabs = ["Posts", "Replies", "Highlights", "Articles", "Media", "Likes"];
 
@@ -16,6 +17,7 @@ function Profile() {
   const [isEditing, setIsEditing] = useState(false);
   const [banner, setBanner] = useState(null);
   const [avatar, setAvatar] = useState(null);
+  const [activeTab, setActiveTab] = useState("Posts");
 
   const displayName = useMemo(() => {
     const fullName = [user?.firstName, user?.lastName].filter(Boolean).join(" ").trim();
@@ -166,11 +168,12 @@ function Profile() {
       </section>
 
       <nav className="grid grid-cols-6 border-y border-[#eff3f4]">
-        {tabs.map((tab, index) => {
-          const isActive = index === 0;
+        {tabs.map((tab) => {
+          const isActive = tab === activeTab;
           return (
             <div
               key={tab}
+              onClick={() => setActiveTab(tab)}
               className={`relative text-center py-4 text-[15px] font-semibold cursor-pointer transition
               ${isActive ? "text-[#0f1419]" : "text-[#536471] hover:bg-gray-100"}`}
             >
@@ -182,6 +185,10 @@ function Profile() {
           );
         })}
       </nav>
+
+      <div>
+        {activeTab === "Replies" && <RepliesFeed />}
+      </div>
     </div>
   );
 }
