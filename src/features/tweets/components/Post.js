@@ -3,6 +3,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import PublishIcon from '@mui/icons-material/Publish';
 import RepeatIcon from '@mui/icons-material/Repeat';
+import StarIcon from '@mui/icons-material/Star';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { useUser } from '@clerk/nextjs';
 import { Avatar } from "@mui/material";
@@ -20,6 +22,8 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
   const [isSubmittingLike, setIsSubmittingLike] = useState(false);
   const [isSubmittingRepost, setIsSubmittingRepost] = useState(false);
+  const [isHighlighted, setIsHighlighted] = useState(false);
+  const [isSubmittingHighlight, setIsSubmittingHighlight] = useState(false);
   const { user } = useUser();
 
   const commenterDisplayName =
@@ -87,6 +91,52 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
 
     return () => unsubscribe();
   }, [postId, user?.id]);
+
+  useEffect(() => {
+    if (!db || !postId || !user?.id) {
+      setIsHighlighted(false);
+      return undefined;
+    }
+
+    const unsubscribe = db
+      .collection('posts')
+      .doc(postId)
+      .collection('highlights')
+      .doc(user.id)
+      .onSnapshot((doc) => {
+        setIsHighlighted(doc.exists);
+      });
+
+    return () => unsubscribe();
+  }, [postId, user?.id]);
+
+  const handleHighlightToggle = async () => {
+    if (!db || !postId || !user?.id || isSubmittingHighlight) return;
+
+    setIsSubmittingHighlight(true);
+
+    const highlightRef = db
+      .collection('posts')
+      .doc(postId)
+      .collection('highlights')
+      .doc(user.id);
+
+    try {
+      if (isHighlighted) {
+        await highlightRef.delete();
+      } else {
+        await highlightRef.set({
+          userId: user.id,
+          displayName: commenterDisplayName,
+          username: commenterUsername,
+          avatar: commenterAvatar,
+          createdAt: serverTimestamp(),
+        });
+      }
+    } finally {
+      setIsSubmittingHighlight(false);
+    }
+  };
 
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
@@ -262,6 +312,27 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
             </span>
           </button>
 
+
+          {username === commenterUsername && (
+            <button
+              type="button"
+              onClick={handleHighlightToggle}
+              disabled={!db || isSubmittingHighlight}
+              className={`group flex items-center border-none bg-transparent p-0 ${
+                isHighlighted ? 'text-yellow-500' : 'text-gray-500'
+              } ${!db || isSubmittingHighlight ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
+            >
+              <div
+                className={`rounded-full p-2 transition-all ${
+                  isHighlighted
+                    ? 'bg-yellow-100 text-yellow-500'
+                    : 'group-hover:bg-yellow-100 group-hover:text-yellow-500'
+                }`}
+              >
+                {isHighlighted ? <StarIcon fontSize="small" /> : <StarBorderIcon fontSize="small" />}
+              </div>
+            </button>
+          )}
 
           <div className="group flex items-center text-gray-500 cursor-pointer">
             <div className="p-2 group-hover:bg-blue-100 group-hover:text-blue-500 rounded-full transition-all">

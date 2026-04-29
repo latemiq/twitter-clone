@@ -1,9 +1,13 @@
-[00:00:03.652] Server  LOG     ✓ Ready in 2.6s
-[00:00:22.571] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:23.185] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
-[00:00:23.185] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
-[00:00:23.185] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:04:33.273] Server  LOG     ✓ Compiled in 2.3s
-[00:04:37.679] Server  LOG     ✓ Compiled in 557ms
-[00:04:41.564] Server  LOG     ✓ Compiled in 170ms
-[00:04:49.714] Server  LOG     ✓ Compiled in 169ms
+[00:00:06.344] Server  LOG     ✓ Ready in 4.4s
+[00:01:17.490] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:17.921] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:17.922] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[00:01:17.922] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[00:05:35.521] Server  LOG     ✓ Compiled in 437ms
+[00:05:40.045] Server  LOG     ✓ Compiled in 175ms
+[00:05:46.924] Server  LOG     ✓ Compiled in 201ms
+[00:05:54.677] Server  LOG     ✓ Compiled in 328ms
+[00:05:59.727] Server  LOG     ✓ Compiled in 201ms
+[00:06:03.911] Server  LOG     ✓ Compiled in 182ms
+[00:06:48.854] Server  LOG     ✓ Compiled in 241ms
+[00:06:53.193] Server  LOG     ✓ Compiled in 221ms

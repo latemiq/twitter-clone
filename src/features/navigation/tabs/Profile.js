@@ -6,7 +6,9 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import CloseIcon from "@mui/icons-material/Close";
 import { useUser } from "@clerk/nextjs";
 import { useNavigate } from "react-router-dom";
+import PostsFeed from "../../tweets/components/PostsFeed";
 import RepliesFeed from "../../tweets/components/RepliesFeed";
+import HighlightsFeed from "../../tweets/components/HighlightsFeed";
 
 const tabs = ["Posts", "Replies", "Highlights", "Articles", "Media", "Likes"];
 
@@ -187,7 +189,9 @@ function Profile() {
       </nav>
 
       <div>
+        {activeTab === "Posts" && <PostsFeed />}
         {activeTab === "Replies" && <RepliesFeed />}
+        {activeTab === "Highlights" && <HighlightsFeed />}
       </div>
     </div>
   );
