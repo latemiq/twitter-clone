@@ -1,0 +1,449 @@
+/* ─── Wrapper & Scroller ───────────────────────────────────────────── */
+.sp-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0f1419;
+}
+
+.sp-scroller {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(29, 155, 240, 0.35) transparent;
+}
+
+.sp-scroller::-webkit-scrollbar {
+  width: 4px;
+}
+.sp-scroller::-webkit-scrollbar-thumb {
+  background: rgba(29, 155, 240, 0.35);
+  border-radius: 4px;
+}
+
+/* ─── Shared section base ──────────────────────────────────────────── */
+.sp-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-section-title {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 56px;
+  letter-spacing: -0.02em;
+}
+
+/* ─── HERO ─────────────────────────────────────────────────────────── */
+.sp-hero {
+  background: linear-gradient(160deg, #0c1220 0%, #0f1419 50%, #071420 100%);
+  text-align: center;
+  gap: 0;
+}
+
+.sp-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  z-index: 2;
+  position: relative;
+}
+
+.sp-logo {
+  width: 72px;
+  height: 72px;
+  color: #1d9bf0;
+  filter: drop-shadow(0 0 32px rgba(29, 155, 240, 0.55));
+}
+
+.sp-tagline {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.sp-headline {
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 80px rgba(29, 155, 240, 0.22);
+}
+
+.sp-subheadline {
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+  max-width: 440px;
+}
+
+.sp-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* ─── Background decorations ──────────────────────────────────────── */
+.sp-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(29, 155, 240, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 155, 240, 0.055) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at center, #000 28%, transparent 76%);
+  pointer-events: none;
+}
+
+.sp-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.sp-orb-a {
+  width: 340px;
+  height: 340px;
+  top: -70px;
+  right: -90px;
+  background: radial-gradient(circle, rgba(29, 155, 240, 0.2), transparent 70%);
+  filter: blur(24px);
+}
+
+.sp-orb-b {
+  width: 260px;
+  height: 260px;
+  bottom: 30px;
+  left: -70px;
+  background: radial-gradient(circle, rgba(150, 60, 220, 0.18), transparent 70%);
+  filter: blur(28px);
+}
+
+.sp-orb-c {
+  width: 200px;
+  height: 200px;
+  top: 32%;
+  left: 6%;
+  background: radial-gradient(circle, rgba(0, 186, 124, 0.14), transparent 70%);
+  filter: blur(20px);
+}
+
+/* ─── Scroll hint ──────────────────────────────────────────────────── */
+.sp-scroll-hint {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.sp-scroll-hint svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ─── CTA buttons ──────────────────────────────────────────────────── */
+.sp-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #1d9bf0;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 13px 32px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 10px 36px rgba(29, 155, 240, 0.38);
+}
+
+.sp-cta-btn:hover {
+  background: #1a8cd8;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 48px rgba(29, 155, 240, 0.48);
+}
+
+.sp-cta-btn:active {
+  transform: translateY(0);
+}
+
+.sp-cta-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+.sp-cta-btn--large {
+  font-size: 1.05rem;
+  padding: 16px 44px;
+  margin-top: 12px;
+}
+
+.sp-cta-btn--large svg {
+  width: 19px;
+  height: 19px;
+}
+
+.sp-skip-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.sp-skip-btn:hover {
+  border-color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ─── FEATURES ─────────────────────────────────────────────────────── */
+.sp-features {
+  background: linear-gradient(180deg, #0f1419 0%, #111d28 100%);
+}
+
+.sp-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.sp-feature-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 36px 28px;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.3s, transform 0.2s;
+  will-change: transform, opacity;
+}
+
+.sp-feature-card:hover {
+  border-color: rgba(29, 155, 240, 0.35);
+  transform: translateY(-3px);
+}
+
+.sp-feature-icon {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.sp-feature-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.sp-feature-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.62);
+  margin: 0;
+}
+
+/* ─── FEED PREVIEW ─────────────────────────────────────────────────── */
+.sp-tweets {
+  background: linear-gradient(180deg, #111d28 0%, #0d1822 100%);
+}
+
+.sp-tweets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.sp-tweet {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 20px;
+  will-change: transform, opacity;
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.sp-tweet:hover {
+  border-color: rgba(29, 155, 240, 0.28);
+  transform: translateY(-2px);
+}
+
+.sp-tweet-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.sp-tweet-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.sp-tweet-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 2px;
+}
+
+.sp-tweet-handle {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.48);
+  margin: 0;
+}
+
+.sp-tweet-text {
+  font-size: 0.9rem;
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.84);
+  margin: 0 0 14px;
+}
+
+.sp-tweet-actions {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+/* ─── STATS ────────────────────────────────────────────────────────── */
+.sp-stats {
+  background: linear-gradient(180deg, #0d1822 0%, #0f1419 100%);
+}
+
+.sp-stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  justify-content: center;
+  width: 100%;
+}
+
+.sp-stat {
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.sp-stat-val {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 900;
+  color: #1d9bf0;
+  letter-spacing: -0.04em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 48px rgba(29, 155, 240, 0.42);
+}
+
+.sp-stat-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 8px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ─── CTA ──────────────────────────────────────────────────────────── */
+.sp-cta {
+  background: linear-gradient(160deg, #0f1419 0%, #081428 60%, #0c1220 100%);
+}
+
+.sp-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.sp-cta-logo {
+  width: 60px;
+  height: 60px;
+  color: #1d9bf0;
+  filter: drop-shadow(0 0 28px rgba(29, 155, 240, 0.55));
+}
+
+.sp-cta-headline {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.sp-cta-sub {
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.62);
+  max-width: 380px;
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ─── Responsive ───────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .sp-section {
+    padding: 60px 16px;
+  }
+
+  .sp-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-tweets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-stats-grid {
+    gap: 36px;
+  }
+
+  .sp-hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
