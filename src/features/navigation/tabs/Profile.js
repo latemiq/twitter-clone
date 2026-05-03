@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import PostsFeed from "../../tweets/components/PostsFeed";
 import RepliesFeed from "../../tweets/components/RepliesFeed";
 import HighlightsFeed from "../../tweets/components/HighlightsFeed";
+import ArticlesFeed from "../../tweets/components/ArticlesFeed";
 
 const tabs = ["Posts", "Replies", "Highlights", "Articles", "Media", "Likes"];
 
@@ -192,6 +193,7 @@ function Profile() {
         {activeTab === "Posts" && <PostsFeed />}
         {activeTab === "Replies" && <RepliesFeed />}
         {activeTab === "Highlights" && <HighlightsFeed />}
+        {activeTab === "Articles" && <ArticlesFeed />}
       </div>
     </div>
   );
