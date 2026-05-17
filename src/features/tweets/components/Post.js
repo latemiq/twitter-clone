@@ -11,7 +11,21 @@ import { Avatar } from "@mui/material";
 import React, { useEffect, useState } from 'react';
 import db, { serverTimestamp } from '../api/firebase';
 
-function Post({ postId, displayName, username, verified, text, image, avatar }) {
+const normalizeUsername = (value) => (value || '').replace(/^@/, '').trim().toLowerCase();
+
+function Post({
+  postId,
+  displayName,
+  username,
+  verified,
+  text,
+  image,
+  avatar,
+  showFollowButton = false,
+  isFollowing = false,
+  isFollowUpdating = false,
+  onFollowToggle,
+}) {
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(0);
   const [isReposted, setIsReposted] = useState(false);
@@ -36,6 +50,13 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
     user?.primaryEmailAddress?.emailAddress?.split('@')[0] ||
     'user';
   const commenterAvatar = user?.imageUrl || '';
+  const canShowFollowButton = Boolean(
+    showFollowButton &&
+      user?.id &&
+      username &&
+      onFollowToggle &&
+      normalizeUsername(username) !== normalizeUsername(commenterUsername)
+  );
 
   useEffect(() => {
     if (!db || !postId) {
@@ -231,12 +252,28 @@ function Post({ postId, displayName, username, verified, text, image, avatar }) 
       </div>
       <div className='post__body flex-1 min-w-0 p-[10px]'>
         <div className='post__header'>
-          <div className='post__headerText'>
-            <h3 className='text-[15px] mb-[5px]'>
-              {displayName}{""}
-              <span className='post__headerSpecial font-[600] text-[12px] text-gray-500'>
-                {verified && <VerifiedUserIcon className="post__badge  text-[14px] text-twitter-color" />}</span>@{username}
-            </h3>
+          <div className="flex items-start justify-between gap-3">
+            <div className='post__headerText min-w-0'>
+              <h3 className='text-[15px] mb-[5px] break-words'>
+                {displayName}{""}
+                <span className='post__headerSpecial font-[600] text-[12px] text-gray-500'>
+                  {verified && <VerifiedUserIcon className="post__badge  text-[14px] text-twitter-color" />}</span>@{username}
+              </h3>
+            </div>
+            {canShowFollowButton && (
+              <button
+                type="button"
+                onClick={() => onFollowToggle({ username, displayName, avatar })}
+                disabled={isFollowUpdating}
+                className={`h-8 shrink-0 rounded-full px-4 text-sm font-bold transition ${
+                  isFollowing
+                    ? 'border border-[#cfd9de] bg-white text-[#0f1419] hover:border-red-200 hover:bg-red-50 hover:text-red-600'
+                    : 'border border-[#0f1419] bg-[#0f1419] text-white hover:bg-[#272c30]'
+                } ${isFollowUpdating ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
+              >
+                {isFollowing ? 'Following' : 'Follow'}
+              </button>
+            )}
           </div>
           <div className='post__headerDescription mb-[10px] text-[15px] '>
             <p>{text}</p>
