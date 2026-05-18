@@ -28,6 +28,7 @@ function TweetBox() {
     }
 
     db.collection('posts').add({
+      userId: user?.id || '',
       displayName,
       username,
       verified: false,

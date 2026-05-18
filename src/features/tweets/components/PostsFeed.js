@@ -66,6 +66,7 @@ function PostsFeed() {
         <Post
           key={post.id}
           postId={post.id}
+          userId={post.userId}
           displayName={post.displayName}
           username={post.username}
           verified={post.verified}

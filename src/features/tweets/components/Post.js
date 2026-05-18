@@ -1,6 +1,9 @@
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import EditIcon from '@mui/icons-material/Edit';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import PublishIcon from '@mui/icons-material/Publish';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import StarIcon from '@mui/icons-material/Star';
@@ -15,16 +18,13 @@ const normalizeUsername = (value) => (value || '').replace(/^@/, '').trim().toLo
 
 function Post({
   postId,
+  userId: postUserId,
   displayName,
   username,
   verified,
   text,
   image,
   avatar,
-  showFollowButton = false,
-  isFollowing = false,
-  isFollowUpdating = false,
-  onFollowToggle,
 }) {
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(0);
@@ -38,6 +38,13 @@ function Post({
   const [isSubmittingRepost, setIsSubmittingRepost] = useState(false);
   const [isHighlighted, setIsHighlighted] = useState(false);
   const [isSubmittingHighlight, setIsSubmittingHighlight] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isEditingPost, setIsEditingPost] = useState(false);
+  const [editText, setEditText] = useState(text || '');
+  const [editImage, setEditImage] = useState(image || '');
+  const [isSavingPost, setIsSavingPost] = useState(false);
+  const [isDeletingPost, setIsDeletingPost] = useState(false);
+  const [postActionError, setPostActionError] = useState(null);
   const { user } = useUser();
 
   const commenterDisplayName =
@@ -50,13 +57,20 @@ function Post({
     user?.primaryEmailAddress?.emailAddress?.split('@')[0] ||
     'user';
   const commenterAvatar = user?.imageUrl || '';
-  const canShowFollowButton = Boolean(
-    showFollowButton &&
-      user?.id &&
-      username &&
-      onFollowToggle &&
-      normalizeUsername(username) !== normalizeUsername(commenterUsername)
+  const isOwnPost = Boolean(
+    user?.id &&
+      ((postUserId && postUserId === user.id) ||
+        normalizeUsername(username) === normalizeUsername(commenterUsername))
   );
+
+  useEffect(() => {
+    if (isEditingPost) {
+      return;
+    }
+
+    setEditText(text || '');
+    setEditImage(image || '');
+  }, [image, isEditingPost, text]);
 
   useEffect(() => {
     if (!db || !postId) {
@@ -132,7 +146,7 @@ function Post({
   }, [postId, user?.id]);
 
   const handleHighlightToggle = async () => {
-    if (!db || !postId || !user?.id || isSubmittingHighlight) return;
+    if (!db || !postId || !isOwnPost || isSubmittingHighlight) return;
 
     setIsSubmittingHighlight(true);
 
@@ -245,6 +259,71 @@ function Post({
     }
   };
 
+  const startEditingPost = () => {
+    setEditText(text || '');
+    setEditImage(image || '');
+    setPostActionError(null);
+    setIsEditingPost(true);
+    setIsMenuOpen(false);
+  };
+
+  const cancelEditingPost = () => {
+    setEditText(text || '');
+    setEditImage(image || '');
+    setPostActionError(null);
+    setIsEditingPost(false);
+  };
+
+  const handleEditPostSubmit = async (e) => {
+    e.preventDefault();
+
+    const nextText = editText.trim();
+    const nextImage = editImage.trim();
+
+    if (!db || !postId || !isOwnPost || isSavingPost || (!nextText && !nextImage)) {
+      return;
+    }
+
+    setIsSavingPost(true);
+    setPostActionError(null);
+
+    try {
+      await db.collection('posts').doc(postId).update({
+        text: nextText,
+        image: nextImage,
+        editedAt: serverTimestamp(),
+      });
+
+      setIsEditingPost(false);
+    } catch (err) {
+      setPostActionError(err.message);
+    } finally {
+      setIsSavingPost(false);
+    }
+  };
+
+  const handleDeletePost = async () => {
+    if (!db || !postId || !isOwnPost || isDeletingPost) {
+      return;
+    }
+
+    if (!window.confirm('Delete this post?')) {
+      setIsMenuOpen(false);
+      return;
+    }
+
+    setIsDeletingPost(true);
+    setPostActionError(null);
+
+    try {
+      await db.collection('posts').doc(postId).delete();
+    } catch (err) {
+      setPostActionError(err.message);
+      setIsDeletingPost(false);
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <div className='post flex w-full items-start border-b-[1px] border-twitter-background pb-[10px]'>
       <div className='post__avatar p-[20px]'>
@@ -260,26 +339,93 @@ function Post({
                   {verified && <VerifiedUserIcon className="post__badge  text-[14px] text-twitter-color" />}</span>@{username}
               </h3>
             </div>
-            {canShowFollowButton && (
-              <button
-                type="button"
-                onClick={() => onFollowToggle({ username, displayName, avatar })}
-                disabled={isFollowUpdating}
-                className={`h-8 shrink-0 rounded-full px-4 text-sm font-bold transition ${
-                  isFollowing
-                    ? 'border border-[#cfd9de] bg-white text-[#0f1419] hover:border-red-200 hover:bg-red-50 hover:text-red-600'
-                    : 'border border-[#0f1419] bg-[#0f1419] text-white hover:bg-[#272c30]'
-                } ${isFollowUpdating ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
-              >
-                {isFollowing ? 'Following' : 'Follow'}
-              </button>
+            {isOwnPost && (
+              <div className="relative shrink-0">
+                <button
+                  type="button"
+                  aria-label="Post options"
+                  aria-expanded={isMenuOpen}
+                  onClick={() => setIsMenuOpen((prev) => !prev)}
+                  disabled={isDeletingPost}
+                  className={`rounded-full border-none bg-transparent p-2 text-gray-500 transition hover:bg-gray-100 hover:text-[#0f1419] ${
+                    isDeletingPost ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'
+                  }`}
+                >
+                  <MoreHorizIcon fontSize="small" />
+                </button>
+                {isMenuOpen && (
+                  <div className="absolute right-0 top-9 z-20 w-40 overflow-hidden rounded-xl border border-[#eff3f4] bg-white py-1 shadow-lg">
+                    <button
+                      type="button"
+                      onClick={startEditingPost}
+                      className="flex w-full items-center gap-3 border-none bg-white px-4 py-3 text-left text-sm font-semibold text-[#0f1419] transition hover:bg-[#f7f9f9]"
+                    >
+                      <EditIcon fontSize="small" />
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleDeletePost}
+                      disabled={isDeletingPost}
+                      className={`flex w-full items-center gap-3 border-none bg-white px-4 py-3 text-left text-sm font-semibold text-red-600 transition hover:bg-red-50 ${
+                        isDeletingPost ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'
+                      }`}
+                    >
+                      <DeleteOutlineIcon fontSize="small" />
+                      {isDeletingPost ? 'Deleting...' : 'Delete'}
+                    </button>
+                  </div>
+                )}
+              </div>
             )}
           </div>
-          <div className='post__headerDescription mb-[10px] text-[15px] '>
-            <p>{text}</p>
-          </div>
+          {isEditingPost ? (
+            <form onSubmit={handleEditPostSubmit} className="mb-[10px]">
+              <textarea
+                value={editText}
+                onChange={(e) => setEditText(e.target.value)}
+                placeholder="What's happening"
+                rows={3}
+                className="w-full resize-none rounded-2xl border border-twitter-background px-4 py-3 text-[15px] outline-none focus:border-twitter-color"
+              />
+              <input
+                value={editImage}
+                onChange={(e) => setEditImage(e.target.value)}
+                placeholder="Optional: Enter image URL"
+                type="text"
+                className="mt-2 w-full rounded-2xl border border-twitter-background px-4 py-3 text-sm outline-none focus:border-twitter-color"
+              />
+              {postActionError && (
+                <p className="mt-2 break-all text-xs text-red-600">{postActionError}</p>
+              )}
+              <div className="mt-3 flex justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={cancelEditingPost}
+                  disabled={isSavingPost}
+                  className="rounded-full border border-[#cfd9de] bg-white px-4 py-2 text-sm font-semibold text-[#0f1419] transition hover:bg-[#f7f9f9] disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSavingPost || (!editText.trim() && !editImage.trim())}
+                  className="rounded-full bg-[var(--twiter-color)] px-4 py-2 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  {isSavingPost ? 'Saving...' : 'Save'}
+                </button>
+              </div>
+            </form>
+          ) : (
+            <div className='post__headerDescription mb-[10px] text-[15px] '>
+              <p>{text}</p>
+              {postActionError && (
+                <p className="mt-2 break-all text-xs text-red-600">{postActionError}</p>
+              )}
+            </div>
+          )}
         </div>
-        {image && (
+        {!isEditingPost && image && (
           <img
             src={image}
             alt='Post attachment'
@@ -350,7 +496,7 @@ function Post({
           </button>
 
 
-          {username === commenterUsername && (
+          {isOwnPost && (
             <button
               type="button"
               onClick={handleHighlightToggle}

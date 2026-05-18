@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useUser } from '@clerk/nextjs';
-import db, { serverTimestamp } from '../api/firebase';
+import db from '../api/firebase';
 import Post from './Post';
 import TweetBox from './TweetBox';
 
@@ -11,8 +11,6 @@ const timelineTabs = [
 
 const normalizeUsername = (value) => (value || '').replace(/^@/, '').trim().toLowerCase();
 
-const getFollowingDocId = (username) => encodeURIComponent(normalizeUsername(username));
-
 function Feed() {
   const { user } = useUser();
   const [activeTimeline, setActiveTimeline] = useState('forYou');
@@ -21,7 +19,6 @@ function Feed() {
   const [loadingPosts, setLoadingPosts] = useState(true);
   const [postsError, setPostsError] = useState(null);
   const [followingError, setFollowingError] = useState(null);
-  const [updatingFollows, setUpdatingFollows] = useState(new Set());
 
   const followingUsernames = useMemo(
     () => new Set(followingProfiles.map((profile) => normalizeUsername(profile.username))),
@@ -86,55 +83,6 @@ function Feed() {
     return () => unsubscribe();
   }, [user?.id]);
 
-  const setFollowUpdating = (username, isUpdating) => {
-    const normalizedUsername = normalizeUsername(username);
-
-    setUpdatingFollows((current) => {
-      const next = new Set(current);
-
-      if (isUpdating) {
-        next.add(normalizedUsername);
-      } else {
-        next.delete(normalizedUsername);
-      }
-
-      return next;
-    });
-  };
-
-  const handleFollowToggle = async ({ username, displayName, avatar }) => {
-    const normalizedUsername = normalizeUsername(username);
-
-    if (!db || !user?.id || !normalizedUsername || updatingFollows.has(normalizedUsername)) {
-      return;
-    }
-
-    setFollowUpdating(normalizedUsername, true);
-
-    const followingRef = db
-      .collection('users')
-      .doc(user.id)
-      .collection('following')
-      .doc(getFollowingDocId(normalizedUsername));
-
-    try {
-      if (followingUsernames.has(normalizedUsername)) {
-        await followingRef.delete();
-      } else {
-        await followingRef.set({
-          username: normalizedUsername,
-          displayName: displayName || normalizedUsername,
-          avatar: avatar || '',
-          createdAt: serverTimestamp(),
-        });
-      }
-    } catch (err) {
-      setFollowingError(err.message);
-    } finally {
-      setFollowUpdating(normalizedUsername, false);
-    }
-  };
-
   const renderEmptyState = () => {
     if (activeTimeline === 'following') {
       const hasFollowedAccounts = followingProfiles.length > 0;
@@ -147,7 +95,7 @@ function Feed() {
           <p className="mt-2 text-[15px] text-[#536471]">
             {hasFollowedAccounts
               ? 'When people you follow post something, it will show up here.'
-              : 'Use the Follow button on posts in For you, then come back to Following.'}
+              : 'Accounts you follow will show up here when they post.'}
           </p>
         </div>
       );
@@ -202,32 +150,25 @@ function Feed() {
       )}
       {followingError && (
         <div className="border-b border-[#eff3f4] px-4 py-3 text-sm text-[#536471]">
-          Could not update following: <span className="break-all text-xs">{followingError}</span>
+          Could not load following: <span className="break-all text-xs">{followingError}</span>
         </div>
       )}
       {!loadingPosts && !postsError && visiblePosts.length === 0 && renderEmptyState()}
       {!loadingPosts &&
         !postsError &&
-        visiblePosts.map((post) => {
-          const normalizedUsername = normalizeUsername(post.username);
-
-          return (
-            <Post
-              key={post.id}
-              postId={post.id}
-              displayName={post.displayName}
-              username={post.username}
-              verified={post.verified}
-              text={post.text}
-              avatar={post.avatar}
-              image={post.image}
-              showFollowButton
-              isFollowing={followingUsernames.has(normalizedUsername)}
-              isFollowUpdating={updatingFollows.has(normalizedUsername)}
-              onFollowToggle={handleFollowToggle}
-            />
-          );
-        })}
+        visiblePosts.map((post) => (
+          <Post
+            key={post.id}
+            postId={post.id}
+            userId={post.userId}
+            displayName={post.displayName}
+            username={post.username}
+            verified={post.verified}
+            text={post.text}
+            avatar={post.avatar}
+            image={post.image}
+          />
+        ))}
     </div>
   );
 }

@@ -84,6 +84,7 @@ function RepliesFeed() {
         <div key={`${post.id}-${comment.id}`}>
           <Post
             postId={post.id}
+            userId={post.userId}
             displayName={post.displayName}
             username={post.username}
             verified={post.verified}
