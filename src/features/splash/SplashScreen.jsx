@@ -81,7 +81,7 @@ export default function SplashScreen({ onDismiss }) {
     document.body.style.overflow = "hidden";
 
     const ctx = gsap.context(() => {
-      // ── Hero entrance ──────────────────────────────────────────
+      // Hero entrance
       gsap.timeline({ defaults: { ease: "power3.out" } })
         .fromTo(".sp-logo",
           { scale: 0, autoAlpha: 0, rotation: -180 },
@@ -102,7 +102,7 @@ export default function SplashScreen({ onDismiss }) {
           { autoAlpha: 0, y: -10 },
           { autoAlpha: 1, y: 0, duration: 0.6 }, "-=0.1");
 
-      // ── Floating orbs ──────────────────────────────────────────
+      // Floating background accents
       [
         [".sp-orb-a", -28, 14, 9, 0],
         [".sp-orb-b", 22, -12, 12, 1.5],
@@ -115,7 +115,7 @@ export default function SplashScreen({ onDismiss }) {
         y: 8, duration: 1.1, ease: "sine.inOut", repeat: -1, yoyo: true,
       });
 
-      // ── Features section ────────────────────────────────────────
+      // Features section
       gsap.fromTo(".sp-features-title",
         { autoAlpha: 0, y: 50 },
         {
@@ -137,7 +137,7 @@ export default function SplashScreen({ onDismiss }) {
         );
       });
 
-      // ── Feed preview section ────────────────────────────────────
+      // Feed preview section
       gsap.fromTo(".sp-feed-title",
         { autoAlpha: 0, y: 50 },
         {
@@ -157,7 +157,7 @@ export default function SplashScreen({ onDismiss }) {
         );
       });
 
-      // ── Stats section ──────────────────────────────────────────
+      // Stats section
       gsap.fromTo(".sp-stats-title",
         { autoAlpha: 0, y: 50 },
         {
@@ -188,7 +188,7 @@ export default function SplashScreen({ onDismiss }) {
         },
       });
 
-      // ── CTA section ────────────────────────────────────────────
+      // CTA section
       gsap.fromTo(".sp-cta-content",
         { autoAlpha: 0, y: 60, scale: 0.95 },
         {
@@ -217,7 +217,7 @@ export default function SplashScreen({ onDismiss }) {
     <div ref={wrapperRef} className="sp-wrapper">
       <div ref={scrollerRef} className="sp-scroller">
 
-        {/* ── HERO ── */}
+        {/* HERO */}
         <section className="sp-hero sp-section">
           <span className="sp-orb sp-orb-a" aria-hidden="true" />
           <span className="sp-orb sp-orb-b" aria-hidden="true" />
@@ -256,7 +256,7 @@ export default function SplashScreen({ onDismiss }) {
           </div>
         </section>
 
-        {/* ── FEATURES ── */}
+        {/* FEATURES */}
         <section className="sp-features sp-section">
           <h2 className="sp-features-title sp-section-title">Odkryj co możesz robić</h2>
           <div className="sp-features-grid">
@@ -270,7 +270,7 @@ export default function SplashScreen({ onDismiss }) {
           </div>
         </section>
 
-        {/* ── FEED PREVIEW ── */}
+        {/* FEED PREVIEW */}
         <section className="sp-tweets sp-section">
           <h2 className="sp-feed-title sp-section-title">Twój feed, na żywo</h2>
           <div className="sp-tweets-grid">
@@ -295,7 +295,7 @@ export default function SplashScreen({ onDismiss }) {
           </div>
         </section>
 
-        {/* ── STATS ── */}
+        {/* STATS */}
         <section className="sp-stats sp-section">
           <h2 className="sp-stats-title sp-section-title">Twitter w liczbach</h2>
           <div className="sp-stats-grid">
@@ -308,7 +308,7 @@ export default function SplashScreen({ onDismiss }) {
           </div>
         </section>
 
-        {/* ── CTA ── */}
+        {/* CTA */}
         <section className="sp-cta sp-section">
           <div className="sp-cta-content">
             <svg className="sp-cta-logo" viewBox="0 0 24 24" aria-hidden="true">

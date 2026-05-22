@@ -1,0 +1,4 @@
+root = true
+
+[*.{js,jsx,ts,tsx,css,json,md}]
+charset = utf-8

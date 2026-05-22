@@ -1,4 +1,4 @@
-/* ─── Wrapper & Scroller ───────────────────────────────────────────── */
+/* Wrapper & Scroller */
 .sp-wrapper {
   position: fixed;
   inset: 0;
@@ -22,7 +22,7 @@
   border-radius: 4px;
 }
 
-/* ─── Shared section base ──────────────────────────────────────────── */
+/* Shared section base */
 .sp-section {
   min-height: 100vh;
   display: flex;
@@ -43,7 +43,7 @@
   letter-spacing: -0.02em;
 }
 
-/* ─── HERO ─────────────────────────────────────────────────────────── */
+/* Hero */
 .sp-hero {
   background: linear-gradient(160deg, #0c1220 0%, #0f1419 50%, #071420 100%);
   text-align: center;
@@ -101,7 +101,7 @@
   margin-top: 8px;
 }
 
-/* ─── Background decorations ──────────────────────────────────────── */
+/* Background decorations */
 .sp-grid-bg {
   position: absolute;
   inset: 0;
@@ -147,7 +147,7 @@
   filter: blur(20px);
 }
 
-/* ─── Scroll hint ──────────────────────────────────────────────────── */
+/* Scroll hint */
 .sp-scroll-hint {
   position: absolute;
   bottom: 36px;
@@ -169,7 +169,7 @@
   height: 20px;
 }
 
-/* ─── CTA buttons ──────────────────────────────────────────────────── */
+/* CTA buttons */
 .sp-cta-btn {
   display: inline-flex;
   align-items: center;
@@ -229,7 +229,7 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* ─── FEATURES ─────────────────────────────────────────────────────── */
+/* Features */
 .sp-features {
   background: linear-gradient(180deg, #0f1419 0%, #111d28 100%);
 }
@@ -277,7 +277,7 @@
   margin: 0;
 }
 
-/* ─── FEED PREVIEW ─────────────────────────────────────────────────── */
+/* Feed preview */
 .sp-tweets {
   background: linear-gradient(180deg, #111d28 0%, #0d1822 100%);
 }
@@ -351,7 +351,7 @@
   color: rgba(255, 255, 255, 0.48);
 }
 
-/* ─── STATS ────────────────────────────────────────────────────────── */
+/* Stats */
 .sp-stats {
   background: linear-gradient(180deg, #0d1822 0%, #0f1419 100%);
 }
@@ -387,7 +387,7 @@
   letter-spacing: 0.1em;
 }
 
-/* ─── CTA ──────────────────────────────────────────────────────────── */
+/* CTA */
 .sp-cta {
   background: linear-gradient(160deg, #0f1419 0%, #081428 60%, #0c1220 100%);
 }
@@ -424,7 +424,7 @@
   line-height: 1.65;
 }
 
-/* ─── Responsive ───────────────────────────────────────────────────── */
+/* Responsive */
 @media (max-width: 640px) {
   .sp-section {
     padding: 60px 16px;
