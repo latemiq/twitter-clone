@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./SplashScreen.css";
@@ -68,17 +68,138 @@ const STATS = [
   { end: 190, suffix: "+", label: "krajów i terytoriów" },
 ];
 
+const LIVE_FEED_INTERVAL_MS = 3200;
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+const LIVE_FEED_INCREMENTS = [
+  { rt: 120, likes: 280 },
+  { rt: 360, likes: 800 },
+  { rt: 240, likes: 620 },
+  { rt: 520, likes: 1100 },
+];
+
+function parseEngagementCount(value) {
+  const normalizedValue = value.toUpperCase().replace(",", ".");
+  const numericValue = Number.parseFloat(normalizedValue);
+
+  if (Number.isNaN(numericValue)) return 0;
+  if (normalizedValue.endsWith("K")) return Math.round(numericValue * 1000);
+  if (normalizedValue.endsWith("M")) return Math.round(numericValue * 1000000);
+
+  return Math.round(numericValue);
+}
+
+function formatEngagementCount(value) {
+  if (value >= 1000000) {
+    const valueInMillions = value / 1000000;
+    return `${valueInMillions.toFixed(1).replace(".0", "")}M`;
+  }
+
+  if (value >= 1000) {
+    const valueInThousands = value / 1000;
+    const formattedValue = valueInThousands < 100
+      ? valueInThousands.toFixed(1).replace(".0", "")
+      : Math.round(valueInThousands).toString();
+
+    return `${formattedValue}K`;
+  }
+
+  return value.toString();
+}
+
 export default function SplashScreen({ onDismiss }) {
   const wrapperRef = useRef(null);
   const scrollerRef = useRef(null);
+  const primaryActionRef = useRef(null);
+  const isDismissingRef = useRef(false);
+  const prefersReducedMotionRef = useRef(false);
+  const [liveFeed, setLiveFeed] = useState(() => ({
+    activeTweetIndex: -1,
+    boosts: TWEETS.map(() => ({ rt: 0, likes: 0 })),
+  }));
+
+  function dismiss() {
+    if (isDismissingRef.current) return;
+
+    isDismissingRef.current = true;
+    document.body.style.overflow = "";
+
+    if (prefersReducedMotionRef.current) {
+      onDismiss();
+      return;
+    }
+
+    if (!wrapperRef.current) {
+      onDismiss();
+      return;
+    }
+
+    gsap.to(wrapperRef.current, {
+      autoAlpha: 0, scale: 1.04, duration: 0.55, ease: "power2.in",
+      onComplete: onDismiss,
+    });
+  }
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(REDUCED_MOTION_QUERY);
+    prefersReducedMotionRef.current = mediaQuery.matches;
+
+    if (mediaQuery.matches) return undefined;
+
+    const intervalId = window.setInterval(() => {
+      setLiveFeed((currentFeed) => {
+        const nextTweetIndex = currentFeed.activeTweetIndex >= TWEETS.length - 1
+          ? 0
+          : currentFeed.activeTweetIndex + 1;
+        const increment = LIVE_FEED_INCREMENTS[nextTweetIndex];
+
+        return {
+          activeTweetIndex: nextTweetIndex,
+          boosts: currentFeed.boosts.map((boost, index) => {
+            if (index !== nextTweetIndex) return boost;
+
+            return {
+              rt: boost.rt + increment.rt,
+              likes: boost.likes + increment.likes,
+            };
+          }),
+        };
+      });
+    }, LIVE_FEED_INTERVAL_MS);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
 
   useLayoutEffect(() => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
+    const prefersReducedMotion = window.matchMedia(REDUCED_MOTION_QUERY).matches;
+    prefersReducedMotionRef.current = prefersReducedMotion;
+    const previouslyFocusedElement = document.activeElement;
     document.body.style.overflow = "hidden";
+    primaryActionRef.current?.focus({ preventScroll: true });
+
+    const handleKeyDown = (event) => {
+      if (event.key !== "Escape") return;
+
+      event.preventDefault();
+      dismiss();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    if (prefersReducedMotion) {
+      return () => {
+        document.removeEventListener("keydown", handleKeyDown);
+        document.body.style.overflow = "";
+
+        if (previouslyFocusedElement instanceof HTMLElement) {
+          previouslyFocusedElement.focus({ preventScroll: true });
+        }
+      };
+    }
+
+    const existingTriggers = new Set(ScrollTrigger.getAll());
 
     const ctx = gsap.context(() => {
       // Hero entrance
@@ -198,23 +319,32 @@ export default function SplashScreen({ onDismiss }) {
       );
     }, wrapperRef);
 
+    const splashTriggers = ScrollTrigger.getAll().filter((trigger) => !existingTriggers.has(trigger));
+
     return () => {
       ctx.revert();
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+      splashTriggers.forEach((trigger) => trigger.kill());
+      document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
+
+      if (previouslyFocusedElement instanceof HTMLElement) {
+        previouslyFocusedElement.focus({ preventScroll: true });
+      }
     };
   }, []);
 
-  const dismiss = () => {
-    document.body.style.overflow = "";
-    gsap.to(wrapperRef.current, {
-      autoAlpha: 0, scale: 1.04, duration: 0.55, ease: "power2.in",
-      onComplete: onDismiss,
-    });
-  };
-
   return (
-    <div ref={wrapperRef} className="sp-wrapper">
+    <div
+      ref={wrapperRef}
+      className="sp-wrapper"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="splash-title"
+    >
+      <button className="sp-sticky-skip" onClick={dismiss}>
+        Pomiń intro
+      </button>
+
       <div ref={scrollerRef} className="sp-scroller">
 
         {/* HERO */}
@@ -229,14 +359,14 @@ export default function SplashScreen({ onDismiss }) {
               <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.255 5.623L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
             </svg>
             <p className="sp-tagline">Dołącz do rozmowy</p>
-            <h1 className="sp-headline">
+            <h1 id="splash-title" className="sp-headline">
               Happening<br />Right Now.
             </h1>
             <p className="sp-subheadline">
               Miliony głosów. Jeden feed. Twój Twitter.
             </p>
             <div className="sp-hero-actions">
-              <button className="sp-cta-btn" onClick={dismiss}>
+              <button ref={primaryActionRef} className="sp-cta-btn" onClick={dismiss}>
                 Wejdź do aplikacji
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7" />
@@ -274,24 +404,34 @@ export default function SplashScreen({ onDismiss }) {
         <section className="sp-tweets sp-section">
           <h2 className="sp-feed-title sp-section-title">Twój feed, na żywo</h2>
           <div className="sp-tweets-grid">
-            {TWEETS.map((t) => (
-              <article key={t.handle} className="sp-tweet">
-                <div className="sp-tweet-header">
-                  <span className="sp-tweet-avatar" style={{ background: t.color }}>
-                    {t.initials}
-                  </span>
-                  <div>
-                    <p className="sp-tweet-name">{t.name}</p>
-                    <p className="sp-tweet-handle">{t.handle}</p>
+            {TWEETS.map((t, i) => {
+              const boost = liveFeed.boosts[i];
+              const isLive = liveFeed.activeTweetIndex === i;
+              const rtCount = formatEngagementCount(parseEngagementCount(t.rt) + boost.rt);
+              const likesCount = formatEngagementCount(parseEngagementCount(t.likes) + boost.likes);
+
+              return (
+                <article key={t.handle} className={`sp-tweet${isLive ? " sp-tweet--live" : ""}`}>
+                  <div className="sp-tweet-header">
+                    <span className="sp-tweet-avatar" style={{ background: t.color }}>
+                      {t.initials}
+                    </span>
+                    <div>
+                      <div className="sp-tweet-title-row">
+                        <p className="sp-tweet-name">{t.name}</p>
+                        {isLive && <span className="sp-live-dot" aria-hidden="true" />}
+                      </div>
+                      <p className="sp-tweet-handle">{t.handle}</p>
+                    </div>
                   </div>
-                </div>
-                <p className="sp-tweet-text">{t.text}</p>
-                <div className="sp-tweet-actions">
-                  <span>🔁 {t.rt}</span>
-                  <span>❤️ {t.likes}</span>
-                </div>
-              </article>
-            ))}
+                  <p className="sp-tweet-text">{t.text}</p>
+                  <div className="sp-tweet-actions">
+                    <span aria-label={`${rtCount} retweetów`}>🔁 {rtCount}</span>
+                    <span aria-label={`${likesCount} polubień`}>❤️ {likesCount}</span>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </section>
 
