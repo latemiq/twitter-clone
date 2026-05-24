@@ -5,6 +5,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import PersonIcon from '@mui/icons-material/Person';
 import { useNavigate } from 'react-router-dom';
+import FollowButton from '../../social/components/FollowButton';
 
 const exploreTabs = ["For You", "Trending", "News", "Sports", "Entertainment"];
 
@@ -367,9 +368,10 @@ function Explore() {
                 <p className="text-[15px] mt-1 text-[#0f1419] leading-snug">{account.bio}</p>
               </div>
             </div>
-            <button className="h-8 !bg-[var(--twiter-color)] text-white font-bold text-[14px] px-4 rounded-full hover:bg-[#272c30] transition ml-2 whitespace-nowrap">
-              Follow
-            </button>
+            <FollowButton
+              profile={{ displayName: account.name, username: account.handle }}
+              className="ml-2 h-8 whitespace-nowrap px-4 text-[14px]"
+            />
           </div>
         ))}
 

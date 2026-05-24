@@ -1,4 +1,6 @@
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import EditIcon from '@mui/icons-material/Edit';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -13,8 +15,7 @@ import { useUser } from '@clerk/nextjs';
 import { Avatar } from "@mui/material";
 import React, { useEffect, useState } from 'react';
 import db, { serverTimestamp } from '../api/firebase';
-
-const normalizeUsername = (value) => (value || '').replace(/^@/, '').trim().toLowerCase();
+import FollowButton, { normalizeUsername } from '../../social/components/FollowButton';
 
 function Post({
   postId,
@@ -38,6 +39,8 @@ function Post({
   const [isSubmittingRepost, setIsSubmittingRepost] = useState(false);
   const [isHighlighted, setIsHighlighted] = useState(false);
   const [isSubmittingHighlight, setIsSubmittingHighlight] = useState(false);
+  const [isBookmarked, setIsBookmarked] = useState(false);
+  const [isSubmittingBookmark, setIsSubmittingBookmark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isEditingPost, setIsEditingPost] = useState(false);
   const [editText, setEditText] = useState(text || '');
@@ -57,10 +60,12 @@ function Post({
     user?.primaryEmailAddress?.emailAddress?.split('@')[0] ||
     'user';
   const commenterAvatar = user?.imageUrl || '';
+  const authorUsernameKey = normalizeUsername(username);
+  const viewerUsernameKey = normalizeUsername(commenterUsername);
   const isOwnPost = Boolean(
     user?.id &&
       ((postUserId && postUserId === user.id) ||
-        normalizeUsername(username) === normalizeUsername(commenterUsername))
+        authorUsernameKey === viewerUsernameKey)
   );
 
   useEffect(() => {
@@ -129,6 +134,24 @@ function Post({
 
   useEffect(() => {
     if (!db || !postId || !user?.id) {
+      setIsBookmarked(false);
+      return undefined;
+    }
+
+    const unsubscribe = db
+      .collection('users')
+      .doc(user.id)
+      .collection('bookmarks')
+      .doc(postId)
+      .onSnapshot((doc) => {
+        setIsBookmarked(doc.exists);
+      });
+
+    return () => unsubscribe();
+  }, [postId, user?.id]);
+
+  useEffect(() => {
+    if (!db || !postId || !user?.id) {
       setIsHighlighted(false);
       return undefined;
     }
@@ -170,6 +193,41 @@ function Post({
       }
     } finally {
       setIsSubmittingHighlight(false);
+    }
+  };
+
+  const handleBookmarkToggle = async () => {
+    if (!db || !postId || !user?.id || isSubmittingBookmark) {
+      return;
+    }
+
+    setIsSubmittingBookmark(true);
+    setPostActionError(null);
+
+    const bookmarkRef = db
+      .collection('users')
+      .doc(user.id)
+      .collection('bookmarks')
+      .doc(postId);
+
+    try {
+      if (isBookmarked) {
+        await bookmarkRef.delete();
+      } else {
+        await bookmarkRef.set({
+          postId,
+          userId: postUserId || '',
+          displayName: displayName || 'User',
+          username: username || 'user',
+          avatar: avatar || '',
+          textPreview: (text || '').slice(0, 180),
+          createdAt: serverTimestamp(),
+        });
+      }
+    } catch (err) {
+      setPostActionError(err.message);
+    } finally {
+      setIsSubmittingBookmark(false);
     }
   };
 
@@ -333,11 +391,22 @@ function Post({
         <div className='post__header'>
           <div className="flex items-start justify-between gap-3">
             <div className='post__headerText min-w-0'>
-              <h3 className='text-[15px] mb-[5px] break-words'>
-                {displayName}{""}
-                <span className='post__headerSpecial font-[600] text-[12px] text-gray-500'>
-                  {verified && <VerifiedUserIcon className="post__badge  text-[14px] text-twitter-color" />}</span>@{username}
-              </h3>
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                <h3 className='text-[15px] mb-[5px] break-words'>
+                  {displayName}{""}
+                  <span className='post__headerSpecial font-[600] text-[12px] text-gray-500'>
+                    {verified && <VerifiedUserIcon className="post__badge  text-[14px] text-twitter-color" />}</span>@{username}
+                </h3>
+                <FollowButton
+                  profile={{
+                    userId: postUserId,
+                    displayName,
+                    username,
+                    avatar,
+                  }}
+                  onError={setPostActionError}
+                />
+              </div>
             </div>
             {isOwnPost && (
               <div className="relative shrink-0">
@@ -516,6 +585,23 @@ function Post({
               </div>
             </button>
           )}
+
+          <button
+            type="button"
+            onClick={handleBookmarkToggle}
+            disabled={!db || !user?.id || isSubmittingBookmark}
+            className={`group flex items-center border-none bg-transparent p-0 ${
+              isBookmarked ? 'text-[#1d9bf0]' : 'text-gray-500'
+            } ${!db || !user?.id || isSubmittingBookmark ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
+          >
+            <div
+              className={`rounded-full p-2 transition-all ${
+                isBookmarked ? 'bg-blue-100 text-[#1d9bf0]' : 'group-hover:bg-blue-100 group-hover:text-[#1d9bf0]'
+              }`}
+            >
+              {isBookmarked ? <BookmarkIcon fontSize="small" /> : <BookmarkBorderIcon fontSize="small" />}
+            </div>
+          </button>
 
           <div className="group flex items-center text-gray-500 cursor-pointer">
             <div className="p-2 group-hover:bg-blue-100 group-hover:text-blue-500 rounded-full transition-all">

@@ -1,5 +1,6 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
+import FollowButton from "../../social/components/FollowButton";
 
 function Widgets() {
   const trends = [
@@ -38,19 +39,16 @@ function Widgets() {
         <h2>Who to follow</h2>
         <div className="mt-4 space-y-3 text-sm font-normal">
           {suggestedAccounts.map((account) => (
-            <a
+            <div
               key={account.handle}
-              href={account.url}
-              target="_blank"
-              rel="noreferrer"
               className="flex items-center justify-between rounded-xl p-2 hover:bg-gray-100 transition-colors"
             >
-              <div>
+              <a href={account.url} target="_blank" rel="noreferrer" className="min-w-0">
                 <p className="font-semibold text-gray-900">{account.name}</p>
                 <p className="text-xs text-gray-500">{account.handle}</p>
-              </div>
-              <span className="rounded-full !bg-[var(--twiter-color)] px-3 py-1 text-xs text-white">Follow</span>
-            </a>
+              </a>
+              <FollowButton profile={{ displayName: account.name, username: account.handle }} />
+            </div>
           ))}
         </div>
       </div>

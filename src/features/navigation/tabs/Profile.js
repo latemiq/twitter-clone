@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SearchIcon from "@mui/icons-material/Search";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
@@ -10,6 +10,7 @@ import PostsFeed from "../../tweets/components/PostsFeed";
 import RepliesFeed from "../../tweets/components/RepliesFeed";
 import HighlightsFeed from "../../tweets/components/HighlightsFeed";
 import ArticlesFeed from "../../tweets/components/ArticlesFeed";
+import db from "../../tweets/api/firebase";
 
 const tabs = ["Posts", "Replies", "Highlights", "Articles", "Media", "Likes"];
 
@@ -21,6 +22,9 @@ function Profile() {
   const [banner, setBanner] = useState(null);
   const [avatar, setAvatar] = useState(null);
   const [activeTab, setActiveTab] = useState("Posts");
+  const [postCount, setPostCount] = useState(0);
+  const [followingCount, setFollowingCount] = useState(0);
+  const [followersCount, setFollowersCount] = useState(0);
 
   const displayName = useMemo(() => {
     const fullName = [user?.firstName, user?.lastName].filter(Boolean).join(" ").trim();
@@ -47,6 +51,56 @@ function Profile() {
 
   const bannerInputRef = useRef(null);
   const avatarInputRef = useRef(null);
+
+  useEffect(() => {
+    if (!db || !user || !username) {
+      setPostCount(0);
+      return undefined;
+    }
+
+    const unsubscribe = db
+      .collection("posts")
+      .where("username", "==", username)
+      .onSnapshot((snapshot) => {
+        setPostCount(snapshot.size);
+      });
+
+    return () => unsubscribe();
+  }, [user, username]);
+
+  useEffect(() => {
+    if (!db || !user?.id) {
+      setFollowingCount(0);
+      return undefined;
+    }
+
+    const unsubscribe = db
+      .collection("users")
+      .doc(user.id)
+      .collection("following")
+      .onSnapshot((snapshot) => {
+        setFollowingCount(snapshot.size);
+      });
+
+    return () => unsubscribe();
+  }, [user?.id]);
+
+  useEffect(() => {
+    if (!db || !user?.id) {
+      setFollowersCount(0);
+      return undefined;
+    }
+
+    const unsubscribe = db
+      .collection("users")
+      .doc(user.id)
+      .collection("followers")
+      .onSnapshot((snapshot) => {
+        setFollowersCount(snapshot.size);
+      });
+
+    return () => unsubscribe();
+  }, [user?.id]);
 
   const handleFileChange = (e, type) => {
     const file = e.target.files[0];
@@ -86,7 +140,7 @@ function Profile() {
             </span>
             <div className="flex flex-col">
               <h1 className="text-[20px] font-bold">{displayName}</h1>
-              <p className="text-[13px] text-[#536471]">0 posts</p>
+              <p className="text-[13px] text-[#536471]">{postCount} posts</p>
             </div>
           </div>
           <span className="w-9 h-9 grid place-items-center rounded-full hover:bg-gray-200 cursor-pointer transition">
@@ -165,8 +219,8 @@ function Profile() {
         </div>
 
         <div className="flex gap-6 mt-3 text-sm">
-          <div><span className="font-bold">1</span> <span className="text-[#536471]">Following</span></div>
-          <div><span className="font-bold">0</span> <span className="text-[#536471]">Followers</span></div>
+          <div><span className="font-bold">{followingCount}</span> <span className="text-[#536471]">Following</span></div>
+          <div><span className="font-bold">{followersCount}</span> <span className="text-[#536471]">Followers</span></div>
         </div>
       </section>
 
